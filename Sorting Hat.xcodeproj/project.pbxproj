@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D7219392447E08700B2D173 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7219382447E08700B2D173 /* Classes.swift */; };
 		8D94A61D2447A14F00B6222A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94A61C2447A14F00B6222A /* AppDelegate.swift */; };
 		8D94A61F2447A14F00B6222A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94A61E2447A14F00B6222A /* SceneDelegate.swift */; };
 		8D94A6212447A14F00B6222A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94A6202447A14F00B6222A /* ContentView.swift */; };
 		8D94A6232447A15000B6222A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D94A6222447A15000B6222A /* Assets.xcassets */; };
 		8D94A6262447A15000B6222A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D94A6252447A15000B6222A /* Preview Assets.xcassets */; };
 		8D94A6292447A15000B6222A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D94A6272447A15000B6222A /* LaunchScreen.storyboard */; };
+		8D9A9E002461F785000E307E /* SortingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9A9DFF2461F785000E307E /* SortingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D7219382447E08700B2D173 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
 		8D94A6192447A14F00B6222A /* Sorting Hat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sorting Hat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D94A61C2447A14F00B6222A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D94A61E2447A14F00B6222A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		8D94A6252447A15000B6222A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8D94A6282447A15000B6222A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D94A62A2447A15000B6222A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D9A9DFF2461F785000E307E /* SortingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				8D94A61C2447A14F00B6222A /* AppDelegate.swift */,
 				8D94A61E2447A14F00B6222A /* SceneDelegate.swift */,
 				8D94A6202447A14F00B6222A /* ContentView.swift */,
+				8D9A9DFF2461F785000E307E /* SortingView.swift */,
 				8D94A6222447A15000B6222A /* Assets.xcassets */,
 				8D94A6272447A15000B6222A /* LaunchScreen.storyboard */,
 				8D94A62A2447A15000B6222A /* Info.plist */,
 				8D94A6242447A15000B6222A /* Preview Content */,
+				8D7219382447E08700B2D173 /* Classes.swift */,
 			);
 			path = "Sorting Hat";
 			sourceTree = "<group>";
@@ -148,7 +154,9 @@
 			files = (
 				8D94A61D2447A14F00B6222A /* AppDelegate.swift in Sources */,
 				8D94A61F2447A14F00B6222A /* SceneDelegate.swift in Sources */,
+				8D7219392447E08700B2D173 /* Classes.swift in Sources */,
 				8D94A6212447A14F00B6222A /* ContentView.swift in Sources */,
+				8D9A9E002461F785000E307E /* SortingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +293,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Sorting Hat/Preview Content\"";
 				DEVELOPMENT_TEAM = 828S8SXVLC;
 				ENABLE_PREVIEWS = YES;
@@ -294,7 +303,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bottsywattsy.Sorting-Hat";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Sorting Hat";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,6 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Sorting Hat/Preview Content\"";
 				DEVELOPMENT_TEAM = 828S8SXVLC;
 				ENABLE_PREVIEWS = YES;
@@ -314,7 +324,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bottsywattsy.Sorting-Hat";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Sorting Hat";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
