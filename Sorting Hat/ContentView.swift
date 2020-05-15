@@ -14,7 +14,7 @@ struct ContentView: View {
     @State var storeSet: Bool = false
     @Environment(\.colorScheme) var colorScheme
     
-    init(){
+    init() {
         UITableView.appearance().backgroundColor = .clear
     }
     
@@ -27,10 +27,12 @@ struct ContentView: View {
                             .scaledToFit()
                 }
                 Form {
-                    TextField("Please type your name then press 'return.'", text: self.$userName, onCommit: {
+                    TextField("Enter your name then press return.", text: self.$userName, onCommit: {
                         self.store.setStore(user: self.userName);
                         self.storeSet = true;
-                        print("User \(self.userName) is set. The Sorting Store has loaded these questions: \(self.store.questions.values.map({$0.question}))") })
+                        print("User \(self.userName) is set. The Sorting Store has loaded these questions: \(self.store.questions.values.map({$0.question}))");
+                        self.userName = "Ahhhh, yes. Let's sort you out."
+                    })
                             .padding()
                 if self.storeSet == true {
                     NavigationLink(destination: SortingView(store: self.store, question: self.store.questions.keys.randomElement()!)) {
@@ -38,7 +40,8 @@ struct ContentView: View {
                             }
                         }
                 }.background(colorScheme == .dark ? Color.black : Color.white)
-            }.padding(.bottom, 200)
+            }
+            .padding(.bottom, 200)
         }
     }
 }

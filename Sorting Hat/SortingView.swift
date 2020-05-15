@@ -58,11 +58,11 @@ struct SortingView: View {
     
     func sortingResult() -> SortingDestination {
         print("Sorting scores are: \(String(describing: self.store.user.sortingScores))")
-        return self.store.user.sortingScores!.max(by: { a, b in a.value < b.value })?.key ?? SortingDestination(name: "Error", description: "The Sorting Hat needs to be fixed.")
+        return self.store.user.sortingScores!.max(by: { a, b in a.value < b.value })?.key ?? SortingDestination(name: "Error", descriptionFull: "The Sorting Hat needs to be fixed.")
     }
     
     var body: some View {
-        VStack{
+        VStack {
             if sortingTime == false {
                 VStack {
                     Text(self.store.questions[currentQuestion]!.question)
@@ -71,6 +71,8 @@ struct SortingView: View {
                     ForEach(self.store.questions[currentQuestion]!.choices, id: \.self.id) { choice in
                         HStack {
                         Text(choice.choiceText)
+                            .lineLimit(nil)
+                            .layoutPriority(1)
                         Spacer()
                             Button("Select", action: {
                                     self.scoreQuestion(choice: choice)
@@ -78,7 +80,9 @@ struct SortingView: View {
                             })
                         }.padding()
                     }
-                }.padding(.bottom, 50)
+                }
+//            .navigationBarBackButtonHidden(true)
+                .padding(.bottom, 50)
             } else {
                 VStack {
                     Spacer()
@@ -87,99 +91,20 @@ struct SortingView: View {
                     Spacer()
                     Text("\(self.sortingResult().name)!")
                     Spacer()
-                    Text(self.sortingResult().description)
+                    Text(self.sortingResult().descriptionFull)
                         .font(.caption)
                         .padding()
                     Spacer()
                 }
-            }
-        }.padding()
+//            .navigationBarBackButtonHidden(false)
+                .padding()
+        }
     }
 }
-        
-//struct ResultsView: View {
-//        @ObservedObject var store: SortingStore
-//
-//        var body: some View {
-//        VStack {
-//            Text("Better be...")
-//            Spacer()
-//            Spacer()
-//            Text("\(self.sortingResult().name)!")
-//            Spacer()
-//            Text(self.sortingResult().description)
-//        }.navigationBarItems(leading: NavigationLink(destination: ContentView()) {
-//                    Text("Start Over")
-//                }
-//        )
-//    }
-//
-//    func sortingResult() -> SortingDestination {
-//        return self.store.user.sortingScores!.max(by: { a, b in a.value < b.value })?.key ?? SortingDestination(name: "Error", description: "The Sorting Hat needs to be fixed.")
-//    }
-//}
-//
-//struct QuestionView: View {
-//    @ObservedObject var store: SortingStore
-//    @Binding var sortingTime: Bool
-//
-//    var body: some View {
-//        VStack {
-//            Text(self.getQuestion().question)
-//                .font(.headline)
-//            ForEach(self.getQuestion().choices, id: \.self.id) { choice in
-//                {
-//                    Button(action:
-//                        {
-//                            self.scoreQuestion(choice: choice)
-//                            self.refreshView()
-//                        }
-//                    )
-//                    {
-//                        Text(choice.choiceText)
-//
-//                    }
-//                }
-//            }
-//        }
-//    }
-//
-//    func getQuestion() -> SortingQuestion {
-//        return self.store.questions[0]
-//    }
-//
-//    func scoreQuestion(choice: SortingQuestion.SortingQuestionChoice) {
-//        self.store.questionScorer(user: self.store.user, question: self.getQuestion(), choice: choice)
-//    }
-//
-//    func refreshView() {
-//        self.store.questions.remove(at: 0)
-//        if self.store.questions.isEmpty {
-//            self.sortingTime = true
-//        }
-//    }
-//}
+}
 
-//struct QuestionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QuestionView(question: SortingQuestion())
-//    }
-//}
-//
 //struct SortingView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        SortingView(store: SortingStore())
+//        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
 //    }
 //}
-//
-//struct ResultsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ResultsView(store: SortingStore())
-//    }
-//}
-
-struct SortingView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
-}
