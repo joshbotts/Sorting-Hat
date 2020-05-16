@@ -38,11 +38,13 @@ struct ContentView: View {
                     NavigationLink(destination: SortingView(store: self.store, question: self.store.questions.keys.randomElement()!)) {
                             Text("Begin the Sorting!")
                             }
+                .isDetailLink(false)
                         }
                 }.background(colorScheme == .dark ? Color.black : Color.white)
             }
             .padding(.bottom, 200)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

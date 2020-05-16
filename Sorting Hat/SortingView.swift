@@ -67,21 +67,25 @@ struct SortingView: View {
                 VStack {
                     Text(self.store.questions[currentQuestion]!.question)
                         .font(.headline)
-                        .padding()
+                        .lineLimit(nil)
+                        .padding(.horizontal, 10)
+                        .padding(.bottom, 20)
                     ForEach(self.store.questions[currentQuestion]!.choices, id: \.self.id) { choice in
                         HStack {
                         Text(choice.choiceText)
                             .lineLimit(nil)
-                            .layoutPriority(1)
+                            .padding(.leading, 5)
                         Spacer()
                             Button("Select", action: {
                                     self.scoreQuestion(choice: choice)
                                     self.refreshView()
                             })
-                        }.padding()
+                                .padding(.trailing, 5)
+                        }
+                            .padding(.bottom, 20)
                     }
                 }
-//            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
                 .padding(.bottom, 50)
             } else {
                 VStack {
