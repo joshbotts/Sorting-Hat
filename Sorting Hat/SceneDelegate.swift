@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import AVFoundation
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -28,6 +29,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+        
+        try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

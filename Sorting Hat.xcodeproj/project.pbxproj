@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		8D7219392447E08700B2D173 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7219382447E08700B2D173 /* Classes.swift */; };
+		8D7E886A2474B892000AAB8D /* Ravenclaw Prefect.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D7E88682474B879000AAB8D /* Ravenclaw Prefect.mov */; };
+		8D8E093824723C5B008095DA /* Dark Lord.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093724723C5B008095DA /* Dark Lord.mov */; };
+		8D8E093A24723C6C008095DA /* Death Eater.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093924723C6C008095DA /* Death Eater.mov */; };
+		8D8E093C24723C7F008095DA /* Dumbledore's Army.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093B24723C7F008095DA /* Dumbledore's Army.mov */; };
+		8D8E093E24723C8E008095DA /* Gryffindor.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093D24723C8E008095DA /* Gryffindor.mov */; };
+		8D8E094024723CA3008095DA /* Hogwarts Headmaster.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093F24723CA3008095DA /* Hogwarts Headmaster.mov */; };
+		8D8E094224723CB4008095DA /* Hufflepuff.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E094124723CB4008095DA /* Hufflepuff.mov */; };
+		8D8E094424723CC3008095DA /* Jedi.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E094324723CC3008095DA /* Jedi.mov */; };
+		8D8E094624723CDB008095DA /* Muggle.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E094524723CDB008095DA /* Muggle.mov */; };
+		8D8E094824723CE7008095DA /* Ravenclaw.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E094724723CE7008095DA /* Ravenclaw.mov */; };
+		8D8E094A24723CFC008095DA /* Sith.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E094924723CFC008095DA /* Sith.mov */; };
+		8D8E094C24723D07008095DA /* Slytherin.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E094B24723D07008095DA /* Slytherin.mov */; };
 		8D94A61D2447A14F00B6222A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94A61C2447A14F00B6222A /* AppDelegate.swift */; };
 		8D94A61F2447A14F00B6222A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94A61E2447A14F00B6222A /* SceneDelegate.swift */; };
 		8D94A6212447A14F00B6222A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94A6202447A14F00B6222A /* ContentView.swift */; };
@@ -19,6 +31,18 @@
 
 /* Begin PBXFileReference section */
 		8D7219382447E08700B2D173 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		8D7E88682474B879000AAB8D /* Ravenclaw Prefect.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Ravenclaw Prefect.mov"; sourceTree = "<group>"; };
+		8D8E093724723C5B008095DA /* Dark Lord.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Dark Lord.mov"; path = "Sorting Hat/Assets.xcassets/Dark Lord.dataset/Dark Lord.mov"; sourceTree = "<group>"; };
+		8D8E093924723C6C008095DA /* Death Eater.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Death Eater.mov"; path = "Sorting Hat/Assets.xcassets/Death Eater.dataset/Death Eater.mov"; sourceTree = "<group>"; };
+		8D8E093B24723C7F008095DA /* Dumbledore's Army.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Dumbledore's Army.mov"; path = "Sorting Hat/Assets.xcassets/Dumbledore's Army.dataset/Dumbledore's Army.mov"; sourceTree = "<group>"; };
+		8D8E093D24723C8E008095DA /* Gryffindor.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Gryffindor.mov; path = "Sorting Hat/Assets.xcassets/Gryffindor.dataset/Gryffindor.mov"; sourceTree = "<group>"; };
+		8D8E093F24723CA3008095DA /* Hogwarts Headmaster.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Hogwarts Headmaster.mov"; path = "Sorting Hat/Assets.xcassets/Hogwarts Headmaster.dataset/Hogwarts Headmaster.mov"; sourceTree = "<group>"; };
+		8D8E094124723CB4008095DA /* Hufflepuff.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Hufflepuff.mov; path = "Sorting Hat/Assets.xcassets/Hufflepuff.dataset/Hufflepuff.mov"; sourceTree = "<group>"; };
+		8D8E094324723CC3008095DA /* Jedi.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Jedi.mov; path = "Sorting Hat/Assets.xcassets/Jedi.dataset/Jedi.mov"; sourceTree = "<group>"; };
+		8D8E094524723CDB008095DA /* Muggle.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Muggle.mov; path = "Sorting Hat/Assets.xcassets/Muggle.dataset/Muggle.mov"; sourceTree = "<group>"; };
+		8D8E094724723CE7008095DA /* Ravenclaw.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Ravenclaw.mov; path = "Sorting Hat/Assets.xcassets/Ravenclaw.dataset/Ravenclaw.mov"; sourceTree = "<group>"; };
+		8D8E094924723CFC008095DA /* Sith.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Sith.mov; path = "Sorting Hat/Assets.xcassets/Sith.dataset/Sith.mov"; sourceTree = "<group>"; };
+		8D8E094B24723D07008095DA /* Slytherin.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Slytherin.mov; path = "Sorting Hat/Assets.xcassets/Slytherin.dataset/Slytherin.mov"; sourceTree = "<group>"; };
 		8D94A6192447A14F00B6222A /* Sorting Hat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sorting Hat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D94A61C2447A14F00B6222A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D94A61E2447A14F00B6222A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +68,18 @@
 		8D94A6102447A14F00B6222A = {
 			isa = PBXGroup;
 			children = (
+				8D7E88682474B879000AAB8D /* Ravenclaw Prefect.mov */,
+				8D8E094B24723D07008095DA /* Slytherin.mov */,
+				8D8E094924723CFC008095DA /* Sith.mov */,
+				8D8E094724723CE7008095DA /* Ravenclaw.mov */,
+				8D8E094524723CDB008095DA /* Muggle.mov */,
+				8D8E094324723CC3008095DA /* Jedi.mov */,
+				8D8E094124723CB4008095DA /* Hufflepuff.mov */,
+				8D8E093F24723CA3008095DA /* Hogwarts Headmaster.mov */,
+				8D8E093D24723C8E008095DA /* Gryffindor.mov */,
+				8D8E093B24723C7F008095DA /* Dumbledore's Army.mov */,
+				8D8E093924723C6C008095DA /* Death Eater.mov */,
+				8D8E093724723C5B008095DA /* Dark Lord.mov */,
 				8D94A61B2447A14F00B6222A /* Sorting Hat */,
 				8D94A61A2447A14F00B6222A /* Products */,
 			);
@@ -139,6 +175,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7E886A2474B892000AAB8D /* Ravenclaw Prefect.mov in Resources */,
+				8D8E094C24723D07008095DA /* Slytherin.mov in Resources */,
+				8D8E094A24723CFC008095DA /* Sith.mov in Resources */,
+				8D8E094824723CE7008095DA /* Ravenclaw.mov in Resources */,
+				8D8E094624723CDB008095DA /* Muggle.mov in Resources */,
+				8D8E094424723CC3008095DA /* Jedi.mov in Resources */,
+				8D8E094224723CB4008095DA /* Hufflepuff.mov in Resources */,
+				8D8E094024723CA3008095DA /* Hogwarts Headmaster.mov in Resources */,
+				8D8E093E24723C8E008095DA /* Gryffindor.mov in Resources */,
+				8D8E093C24723C7F008095DA /* Dumbledore's Army.mov in Resources */,
+				8D8E093A24723C6C008095DA /* Death Eater.mov in Resources */,
+				8D8E093824723C5B008095DA /* Dark Lord.mov in Resources */,
 				8D94A6292447A15000B6222A /* LaunchScreen.storyboard in Resources */,
 				8D94A6262447A15000B6222A /* Preview Assets.xcassets in Resources */,
 				8D94A6232447A15000B6222A /* Assets.xcassets in Resources */,
@@ -224,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -293,7 +341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Sorting Hat/Preview Content\"";
 				DEVELOPMENT_TEAM = 828S8SXVLC;
 				ENABLE_PREVIEWS = YES;
@@ -314,7 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Sorting Hat/Preview Content\"";
 				DEVELOPMENT_TEAM = 828S8SXVLC;
 				ENABLE_PREVIEWS = YES;

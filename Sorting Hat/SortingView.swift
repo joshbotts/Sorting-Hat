@@ -7,16 +7,20 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct SortingView: View {
+    @Environment(\.presentationMode) var presentationMode
     @ObservedObject var store: SortingStore
     @State var sortingTime: Bool = false
     @State var questionsAsked: Int = 0
     @State var currentQuestion: Int
+    var kidsMode: Bool
     
-    init(store: SortingStore, question: Int) {
+    init(store: SortingStore, question: Int, kidsMode: Bool) {
         self._currentQuestion = /*State<Int>*/.init(initialValue: question)
         self.store = store
+        self.kidsMode = kidsMode
         print("The Sorting View has received the Sorting Store")
         print("The current question is \(store.questions[self.currentQuestion]!.question)")
     }
@@ -32,7 +36,7 @@ struct SortingView: View {
             self.sortingTime = true
             print("No more unasked questions. Time to sort.")
         }
-            return unaskedQuestions.randomElement()!.key
+        return unaskedQuestions.randomElement()!.key
     }
     
     func scoreQuestion(choice: SortingQuestion.SortingQuestionChoice) {
@@ -62,49 +66,122 @@ struct SortingView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             if sortingTime == false {
+                if kidsMode == true {
+                    VStack {
+                        Text(self.store.questions[currentQuestion]!.question)
+                            .font(.headline)
+                            .lineLimit(nil)
+                            .layoutPriority(1)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding(.horizontal, 10)
+                            .padding(.bottom, 20)
+                        }
+                        .lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
+                    ScrollView(.horizontal, showsIndicators: true) {
+                        HStack {
+                        ForEach(self.store.questions[currentQuestion]!.choices, id: \.self.id) { choice in
+                                        Button(action: {
+                                            self.scoreQuestion(choice: choice)
+                                            self.refreshView()
+                                        })  {
+                                                Image(choice.choiceImage!)
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(maxWidth: 300, maxHeight: 300)
+                                            }
+                                        .buttonStyle(PlainButtonStyle())
+                                    }
+                            }
+                    }
+                            .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(true)
+                            .padding(.bottom, 20)
+                        } else {
                 VStack {
+                    VStack {
                     Text(self.store.questions[currentQuestion]!.question)
                         .font(.headline)
                         .lineLimit(nil)
+                        .layoutPriority(1)
+                        .fixedSize(horizontal: false, vertical: true)
                         .padding(.horizontal, 10)
                         .padding(.bottom, 20)
+                    }
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
                     ForEach(self.store.questions[currentQuestion]!.choices, id: \.self.id) { choice in
                         HStack {
-                        Text(choice.choiceText)
-                            .lineLimit(nil)
-                            .padding(.leading, 5)
-                        Spacer()
-                            Button("Select", action: {
-                                    self.scoreQuestion(choice: choice)
-                                    self.refreshView()
+                            Button(choice.choiceText, action: {
+                                self.scoreQuestion(choice: choice)
+                                self.refreshView()
                             })
-                                .padding(.trailing, 5)
+                            .layoutPriority(2)
+                                .lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical: true)
+                            Spacer()
                         }
-                            .padding(.bottom, 20)
+                    .lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical: true)
+                        .padding(.horizontal, 10)
+                        .padding(.bottom, 20)
                     }
                 }
-            .navigationBarHidden(true)
-                .padding(.bottom, 50)
+                .navigationBarHidden(true)
+                    .navigationBarBackButtonHidden(true)
+                .padding(.bottom, 20)
+            }
             } else {
-                VStack {
-                    Spacer()
-                    Text("Better be...")
-                    Spacer()
-                    Spacer()
-                    Text("\(self.sortingResult().name)!")
-                    Spacer()
-                    Text(self.sortingResult().descriptionFull)
-                        .font(.caption)
+                VStack(alignment: .center) {
+                        DestinationMovie(player: AVPlayer(url: Bundle.main.url(forResource: self.sortingResult().name, withExtension: "mov")!))
+                        Spacer()
+                        Text("\(self.store.user.name), you strike me as a...")
+                        Spacer()
+                    Text(self.sortingResult().name == "Dumbledore's Army" ? "member of \(self.sortingResult().name)!" : "\(self.sortingResult().name)!")
+                        Spacer()
+                        Text(self.sortingResult().descriptionFull)
+                            .font(.caption)
+                            .padding()
+                        Spacer()
+                    }
                         .padding()
-                    Spacer()
+                .navigationBarHidden(false)
+                .navigationBarBackButtonHidden(false)
+                .navigationBarItems(leading: Button("Sort Again?"){self.presentationMode.wrappedValue.dismiss()})
                 }
-//            .navigationBarBackButtonHidden(false)
-                .padding()
         }
+        .frame(maxWidth: 700, alignment: .center)
+        }
+}
+
+struct DestinationMovie: View, UIViewRepresentable {
+    let player: AVPlayer
+    
+    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<DestinationMovie>) {
+        player.play()
+    }
+    func makeUIView(context: Context) -> UIView {
+        return PlayerUIView(player: player)
     }
 }
+
+class PlayerUIView: UIView {
+let playerLayer = AVPlayerLayer()
+    init(player: AVPlayer) {
+        super.init(frame: .zero)
+    
+    playerLayer.player = player
+    layer.addSublayer(playerLayer)
+  }
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    playerLayer.frame = bounds
+  }
 }
 
 //struct SortingView_Previews: PreviewProvider {
