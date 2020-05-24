@@ -131,3 +131,5 @@ class KeyboardResponder: ObservableObject {
         currentHeight = 0
     }
 }
+
+// implemented view response to keyboard activation from https://stackoverflow.com/a/58242249/12259419

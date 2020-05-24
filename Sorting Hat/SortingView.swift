@@ -29,6 +29,8 @@ struct SortingView: View {
         print(self.talkingHat ? "The Sorting Hat will automatically speak" : "The Sortign Hat will only speak when asked")
     }
     
+    // learned how to initialize a @State wrapped property at https://stackoverflow.com/questions/59920657/swiftui-documentation-for-state-property-wrapper
+    
     func getQuestion() -> Int {
         var unaskedQuestions = Dictionary<Int, SortingQuestion>()
         for question in self.store.questions {
@@ -77,6 +79,8 @@ struct SortingView: View {
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
     }
+    
+    // implemented text to speech thanks to Paul Hudson: https://www.hackingwithswift.com/example-code/media/how-to-convert-text-to-speech-using-avspeechsynthesizer-avspeechutterance-and-avspeechsynthesisvoice
     
     func speakChoice(choice: SortingQuestion.SortingQuestionChoice) {
         let utterance = AVSpeechUtterance(string: choice.choiceText)
@@ -203,6 +207,9 @@ struct DestinationMovie: View, UIViewRepresentable {
         return PlayerUIView(player: player)
     }
 }
+
+// learned how to implement AVPlayer through a SwiftUI View at https://medium.com/flawless-app-stories/avplayer-swiftui-part-2-player-controls-c28b721e7e27
+// tried to also implement a ZStack-overlaid transparent button over the DestinationMovie view to allow users to replay the sorting video, but could not figure out how to set the coordinator object in the DestinationMovie view to allow the player to receive events from the the overlaid button
 
 class PlayerUIView: UIView {
     let playerLayer = AVPlayerLayer()
