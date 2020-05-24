@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D7219392447E08700B2D173 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7219382447E08700B2D173 /* Classes.swift */; };
-		8D7E886A2474B892000AAB8D /* Ravenclaw Prefect.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D7E88682474B879000AAB8D /* Ravenclaw Prefect.mov */; };
+		8D78C6E2247A0E1800185B1C /* Ravenclaw Prefect.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D78C6E1247A0E1800185B1C /* Ravenclaw Prefect.mov */; };
 		8D8E093824723C5B008095DA /* Dark Lord.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093724723C5B008095DA /* Dark Lord.mov */; };
 		8D8E093A24723C6C008095DA /* Death Eater.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093924723C6C008095DA /* Death Eater.mov */; };
 		8D8E093C24723C7F008095DA /* Dumbledore's Army.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093B24723C7F008095DA /* Dumbledore's Army.mov */; };
@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		8D7219382447E08700B2D173 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
-		8D7E88682474B879000AAB8D /* Ravenclaw Prefect.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Ravenclaw Prefect.mov"; sourceTree = "<group>"; };
+		8D78C6E1247A0E1800185B1C /* Ravenclaw Prefect.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Ravenclaw Prefect.mov"; path = "Sorting Hat/Assets.xcassets/Ravenclaw Prefect.dataset/Ravenclaw Prefect.mov"; sourceTree = "<group>"; };
 		8D8E093724723C5B008095DA /* Dark Lord.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Dark Lord.mov"; path = "Sorting Hat/Assets.xcassets/Dark Lord.dataset/Dark Lord.mov"; sourceTree = "<group>"; };
 		8D8E093924723C6C008095DA /* Death Eater.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Death Eater.mov"; path = "Sorting Hat/Assets.xcassets/Death Eater.dataset/Death Eater.mov"; sourceTree = "<group>"; };
 		8D8E093B24723C7F008095DA /* Dumbledore's Army.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Dumbledore's Army.mov"; path = "Sorting Hat/Assets.xcassets/Dumbledore's Army.dataset/Dumbledore's Army.mov"; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		8D94A6102447A14F00B6222A = {
 			isa = PBXGroup;
 			children = (
-				8D7E88682474B879000AAB8D /* Ravenclaw Prefect.mov */,
+				8D78C6E1247A0E1800185B1C /* Ravenclaw Prefect.mov */,
 				8D8E094B24723D07008095DA /* Slytherin.mov */,
 				8D8E094924723CFC008095DA /* Sith.mov */,
 				8D8E094724723CE7008095DA /* Ravenclaw.mov */,
@@ -175,7 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D7E886A2474B892000AAB8D /* Ravenclaw Prefect.mov in Resources */,
+				8D78C6E2247A0E1800185B1C /* Ravenclaw Prefect.mov in Resources */,
 				8D8E094C24723D07008095DA /* Slytherin.mov in Resources */,
 				8D8E094A24723CFC008095DA /* Sith.mov in Resources */,
 				8D8E094824723CE7008095DA /* Ravenclaw.mov in Resources */,
