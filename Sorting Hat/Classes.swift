@@ -164,13 +164,14 @@ class SortingStore: ObservableObject {
     }
     
     func setStore(user: String) {
-        let highest: Int = Int.random(in: 2...4)
-        let higher: Int = Int.random(in: 1...3)
-        let high: Int = Int.random(in: 0...2)
+        let destiny: Int = 50
+        let highest: Int = Int.random(in: 5...7)
+        let higher: Int = Int.random(in: 3...5)
+        let high: Int = Int.random(in: 1...3)
         let neutral: Int = Int.random(in: -1...1)
-        let low: Int = Int.random(in: -2...0)
-        let lower: Int = Int.random(in: -3 ... -1)
-        let lowest: Int = Int.random(in: -4 ... -2)
+        let low: Int = Int.random(in: -3 ... -1)
+        let lower: Int = Int.random(in: -5 ... -3)
+        let lowest: Int = Int.random(in: -7 ... -5)
         
         //        func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
         //            let data: Data
@@ -260,7 +261,7 @@ class SortingStore: ObservableObject {
                 ScoreForDestination(destination: self.destinations["Sith"]!, score: low)
             ]),
             ScoreForName(userNameString: "bolga", nameScoresForDestination: [
-                ScoreForDestination(destination: self.destinations["Ravenclaw Prefect"]!, score: 15)
+                ScoreForDestination(destination: self.destinations["Ravenclaw Prefect"]!, score: destiny)
             ]),
             ScoreForName(userNameString: "renee", nameScoresForDestination: [
                 ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: high),
@@ -371,17 +372,17 @@ class SortingStore: ObservableObject {
                 ScoreForDestination(destination: self.destinations["Sith"]!, score: high)
             ]),
             ScoreForName(userNameString: "voldemort", nameScoresForDestination: [
-                ScoreForDestination(destination: self.destinations["Dark Lord"]!, score: 20)
+                ScoreForDestination(destination: self.destinations["Dark Lord"]!, score: destiny)
             ]),
             ScoreForName(userNameString: "dumbledore", nameScoresForDestination: [
-                ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: 20)
+                ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: destiny)
             ]),
             ScoreForName(userNameString: "potter", nameScoresForDestination: [
-                ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: 5),
-                ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: 5)
+                ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: highest),
+                ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: highest)
             ]),
             ScoreForName(userNameString: "longbottom", nameScoresForDestination: [
-                ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: 10)
+                ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: highest)
             ])
             
         ]
@@ -403,7 +404,7 @@ class SortingStore: ObservableObject {
                 SortingQuestion.SortingQuestionChoice(id: "miss Obama", choiceText: "I miss Obama.", choiceScoresForDestinations: [
                     ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: Int.random(in: 1...2)),
+                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
@@ -714,7 +715,7 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: lower),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: higher),
                     ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: lower),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: lower),ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: low),
+                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: lower),
                     ScoreForDestination(destination: self.destinations["Death Eater"]!, score: highest),
                     ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: lower),
@@ -726,7 +727,7 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: lower),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: higher),
                     ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: lower),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: lower),ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: low),
+                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: lower),
                     ScoreForDestination(destination: self.destinations["Death Eater"]!, score: highest),
                     ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: lower),
@@ -1110,7 +1111,7 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: higher),
                     ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: neutral),
@@ -1160,7 +1161,7 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: higher),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
                 ])
@@ -1179,13 +1180,13 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: high)
                 ]),
                 SortingQuestion.SortingQuestionChoice(id: "stone", choiceText: "With the stone, I could face even my greatest fears.", choiceScoresForDestinations: [
-                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: higher),
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: higher),
+                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: low),
                     ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
@@ -1199,7 +1200,7 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
                 ]),
                 SortingQuestion.SortingQuestionChoice(id: "what", choiceText: "What are you talking about?", choiceScoresForDestinations: [
@@ -1946,13 +1947,14 @@ class SortingStore: ObservableObject {
     }
     
     func setKidStore(user: String) {
-        let highest: Int = Int.random(in: 2...4)
-        let higher: Int = Int.random(in: 1...3)
-        let high: Int = Int.random(in: 0...2)
+        let destiny: Int = 50
+        let highest: Int = Int.random(in: 5...7)
+        let higher: Int = Int.random(in: 3...5)
+        let high: Int = Int.random(in: 1...3)
         let neutral: Int = Int.random(in: -1...1)
-        let low: Int = Int.random(in: -2...0)
-        let lower: Int = Int.random(in: -3 ... -1)
-        let lowest: Int = Int.random(in: -4 ... -2)
+        let low: Int = Int.random(in: -3 ... -1)
+        let lower: Int = Int.random(in: -5 ... -3)
+        let lowest: Int = Int.random(in: -7 ... -5)
         
     //        func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
     //            let data: Data
@@ -2022,7 +2024,7 @@ class SortingStore: ObservableObject {
             ScoreForDestination(destination: self.destinations["Sith"]!, score: lowest)
         ]),
         ScoreForName(userNameString: "bolga", nameScoresForDestination: [
-            ScoreForDestination(destination: self.destinations["Ravenclaw Prefect"]!, score: 15)
+            ScoreForDestination(destination: self.destinations["Ravenclaw Prefect"]!, score: destiny)
         ]),
         ScoreForName(userNameString: "renee", nameScoresForDestination: [
             ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: high),
@@ -2097,10 +2099,10 @@ class SortingStore: ObservableObject {
             ScoreForDestination(destination: self.destinations["Sith"]!, score: high)
         ]),
         ScoreForName(userNameString: "voldemort", nameScoresForDestination: [
-            ScoreForDestination(destination: self.destinations["Dark Lord"]!, score: 20)
+            ScoreForDestination(destination: self.destinations["Dark Lord"]!, score: destiny)
         ]),
         ScoreForName(userNameString: "potter", nameScoresForDestination: [
-            ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: 5)
+            ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: highest)
         ])
     ]
     print("Name Scores have been added to the Sorting Store")
