@@ -27,6 +27,8 @@
 		8D94A6262447A15000B6222A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D94A6252447A15000B6222A /* Preview Assets.xcassets */; };
 		8D94A6292447A15000B6222A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D94A6272447A15000B6222A /* LaunchScreen.storyboard */; };
 		8D9A9E002461F785000E307E /* SortingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9A9DFF2461F785000E307E /* SortingView.swift */; };
+		8DCF6CA024819294003B75BB /* RegularModeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF6C9F24819294003B75BB /* RegularModeStore.swift */; };
+		8DCF6CA2248192F3003B75BB /* KidModeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF6CA1248192F3003B75BB /* KidModeStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		8D94A6282447A15000B6222A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D94A62A2447A15000B6222A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D9A9DFF2461F785000E307E /* SortingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingView.swift; sourceTree = "<group>"; };
+		8DCF6C9F24819294003B75BB /* RegularModeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularModeStore.swift; sourceTree = "<group>"; };
+		8DCF6CA1248192F3003B75BB /* KidModeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidModeStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				8D94A62A2447A15000B6222A /* Info.plist */,
 				8D94A6242447A15000B6222A /* Preview Content */,
 				8D7219382447E08700B2D173 /* Classes.swift */,
+				8DCF6CA1248192F3003B75BB /* KidModeStore.swift */,
+				8DCF6C9F24819294003B75BB /* RegularModeStore.swift */,
 			);
 			path = "Sorting Hat";
 			sourceTree = "<group>";
@@ -203,8 +209,10 @@
 				8D94A61D2447A14F00B6222A /* AppDelegate.swift in Sources */,
 				8D94A61F2447A14F00B6222A /* SceneDelegate.swift in Sources */,
 				8D7219392447E08700B2D173 /* Classes.swift in Sources */,
+				8DCF6CA2248192F3003B75BB /* KidModeStore.swift in Sources */,
 				8D94A6212447A14F00B6222A /* ContentView.swift in Sources */,
 				8D9A9E002461F785000E307E /* SortingView.swift in Sources */,
+				8DCF6CA024819294003B75BB /* RegularModeStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

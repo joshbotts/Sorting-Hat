@@ -27,7 +27,7 @@ struct SortingView: View {
         print("The Sorting View has received the Sorting Store")
         print("The current question is \(store.questions[self.currentQuestion]!.question)")
         print(self.kidsMode ? "The Sorting Hat is in Kid's Mode" : "The Sorting Hat is not in Kid's Mode")
-        print(self.talkingHat ? "The Sorting Hat will automatically speak" : "The Sortign Hat will only speak when asked")
+        print(self.talkingHat ? "The Sorting Hat will automatically speak" : "The Sorting Hat will only speak when asked")
     }
     
     // learned how to initialize a @State wrapped property at https://stackoverflow.com/questions/59920657/swiftui-documentation-for-state-property-wrapper
