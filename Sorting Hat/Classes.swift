@@ -3045,10 +3045,6 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: low),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: low),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
                 ]),
@@ -3057,10 +3053,6 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: low),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
                 ]),
@@ -3069,10 +3061,6 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
                 ]),
@@ -3081,10 +3069,6 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: high)
                 ]),
@@ -3093,10 +3077,6 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
                 ]),
@@ -3105,10 +3085,6 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
                 ]),
@@ -3117,10 +3093,6 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: low),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
                 ]),
@@ -3129,10 +3101,6 @@ class SortingStore: ObservableObject {
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: low),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: low),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
                 ])
