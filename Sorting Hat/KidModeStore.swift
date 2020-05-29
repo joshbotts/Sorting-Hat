@@ -215,14 +215,6 @@ extension SortingStore {
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: highest),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: lowest)
                 ]),
-                SortingQuestion.SortingQuestionChoice(id: "ahsoka", choiceText: "ahsoka", choiceImage: "ahsoka", choiceScoresForDestinations: [
-                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: highest),
-                    ScoreForDestination(destination: self.destinations["Sith"]!, score: lowest)
-                ]),
                 SortingQuestion.SortingQuestionChoice(id: "boba fett", choiceText: "boba fett", choiceImage: "boba fett", choiceScoresForDestinations: [
                     ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
@@ -675,6 +667,14 @@ extension SortingStore {
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: lower),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: higher)
                 ]),
+                SortingQuestion.SortingQuestionChoice(id: "mace", choiceText: "mace", choiceImage: "mace", choiceScoresForDestinations: [
+                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: higher),
+                    ScoreForDestination(destination: self.destinations["Sith"]!, score: lower)
+                ]),
                 SortingQuestion.SortingQuestionChoice(id: "anakin", choiceText: "anakin", choiceImage: "anakin", choiceScoresForDestinations: [
                     ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
@@ -691,6 +691,22 @@ extension SortingStore {
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: higher),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: lower)
                 ]),
+                SortingQuestion.SortingQuestionChoice(id: "ahsoka", choiceText: "ahsoka", choiceImage: "ahsoka", choiceScoresForDestinations: [
+                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: highest),
+                    ScoreForDestination(destination: self.destinations["Sith"]!, score: lowest)
+                ]),
+                SortingQuestion.SortingQuestionChoice(id: "grievous", choiceText: "grievous", choiceImage: "grievous", choiceScoresForDestinations: [
+                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: lower),
+                    ScoreForDestination(destination: self.destinations["Sith"]!, score: higher)
+                ]),
                 SortingQuestion.SortingQuestionChoice(id: "obiwan", choiceText: "obiwan", choiceImage: "obiwan", choiceScoresForDestinations: [
                     ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
@@ -698,6 +714,14 @@ extension SortingStore {
                     ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: higher),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: lower)
+                ]),
+                SortingQuestion.SortingQuestionChoice(id: "dooku", choiceText: "dooku", choiceImage: "dooku", choiceScoresForDestinations: [
+                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: lower),
+                    ScoreForDestination(destination: self.destinations["Sith"]!, score: higher)
                 ])
             ]),
             13: SortingQuestion(kidMode: true, question: "Which of these Baby Yoda pictures is the cutest?", choices: [
