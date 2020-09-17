@@ -12,7 +12,7 @@ import SwiftUI
 
 extension SortingStore {
     func setStore(user: String) {
-        let destiny: Int = 50
+        let destiny: Int = 500
         let highest: Int = Int.random(in: 5...7)
         let higher: Int = Int.random(in: 3...5)
         let high: Int = Int.random(in: 1...3)
@@ -20,28 +20,6 @@ extension SortingStore {
         let low: Int = Int.random(in: -3 ... -1)
         let lower: Int = Int.random(in: -5 ... -3)
         let lowest: Int = Int.random(in: -7 ... -5)
-        
-        //        func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
-        //            let data: Data
-        //
-        //            guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-        //                else {
-        //                    fatalError("Couldn't find \(filename) in main bundle.")
-        //            }
-        //
-        //            do {
-        //                data = try Data(contentsOf: file)
-        //            } catch {
-        //                fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
-        //            }
-        //
-        //            do {
-        //                let decoder = JSONDecoder()
-        //                return try decoder.decode(T.self, from: data)
-        //            } catch {
-        //                fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
-        //            }
-        //        }
         self.user = User(user)
         print("User \(user) has been added to the Sorting Store.")
         self.destinations = [
@@ -2091,6 +2069,68 @@ extension SortingStore {
                     ScoreForDestination(destination: self.destinations["Muggle"]!, score: higher),
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: low),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: highest)
+                ])
+            ]),
+            24: SortingQuestion(question: "Which of these locations within Hogwarts would you most like to visit?", choices: [
+                SortingQuestion.SortingQuestionChoice(id: "chamber of secrets", choiceText: "The Chamber of Secrets. No muggle-borns allowed!", choiceScoresForDestinations: [
+                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: low),
+                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: low),
+                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: higher),
+                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: low),
+                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: highest),
+                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: lower),
+                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: lower),
+                    ScoreForDestination(destination: self.destinations["Sith"]!, score: high)
+                ]),
+                SortingQuestion.SortingQuestionChoice(id: "headmaster's office", choiceText: "The Headmaster's Office. Portraits and pensieves!", choiceScoresForDestinations: [
+                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: higher),
+                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: low),
+                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: highest),
+                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: low),
+                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
+                ]),
+                SortingQuestion.SortingQuestionChoice(id: "kitchens", choiceText: "The Kitchens. Yum yum yum in my tum tum tum.", choiceScoresForDestinations: [
+                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: highest),
+                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: low),
+                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: lower),
+                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: lower),
+                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: higher),
+                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: lower),
+                    ScoreForDestination(destination: self.destinations["Sith"]!, score: lower)
+                ]),
+                SortingQuestion.SortingQuestionChoice(id: "library", choiceText: "The Library. Just think of all that power just waiting for me on those shelves!", choiceScoresForDestinations: [
+                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
+                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: highest),
+                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: low),
+                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: higher),
+                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: higher),
+                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: low),
+                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Sith"]!, score: high)
+                ]),
+                SortingQuestion.SortingQuestionChoice(id: "room of requirement", choiceText: "The Room of Requirement. Duh.", choiceScoresForDestinations: [
+                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: low),
+                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: highest),
+                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: higher),
+                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: low),
+                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
+                    ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
                 ])
             ])
         ]

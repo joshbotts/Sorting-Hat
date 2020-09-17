@@ -12,7 +12,7 @@ import SwiftUI
 
 extension SortingStore {
     func setKidStore(user: String) {
-        let destiny: Int = 50
+        let destiny: Int = 500
         let highest: Int = Int.random(in: 5...7)
         let higher: Int = Int.random(in: 3...5)
         let high: Int = Int.random(in: 1...3)
@@ -20,28 +20,6 @@ extension SortingStore {
         let low: Int = Int.random(in: -3 ... -1)
         let lower: Int = Int.random(in: -5 ... -3)
         let lowest: Int = Int.random(in: -7 ... -5)
-        
-        //        func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
-        //            let data: Data
-        //
-        //            guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-        //                else {
-        //                    fatalError("Couldn't find \(filename) in main bundle.")
-        //            }
-        //
-        //            do {
-        //                data = try Data(contentsOf: file)
-        //            } catch {
-        //                fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
-        //            }
-        //
-        //            do {
-        //                let decoder = JSONDecoder()
-        //                return try decoder.decode(T.self, from: data)
-        //            } catch {
-        //                fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
-        //            }
-        //        }
         self.user = User(user)
         print("User \(user) has been added to the Sorting Store.")
         self.destinations = [

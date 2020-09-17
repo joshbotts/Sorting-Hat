@@ -12,6 +12,7 @@ import AVFoundation
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    var store = SortingStore()
     var window: UIWindow?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -20,17 +21,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        let contentView = ContentView().environmentObject(store)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(store))
             self.window = window
             window.makeKeyAndVisible()
         }
         
-        try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+//        try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

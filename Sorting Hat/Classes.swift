@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 import SwiftUI
+import AVKit
 
 struct SortingDestination: Decodable, Hashable, Equatable, CustomStringConvertible {
     let name: String
@@ -158,6 +159,20 @@ class SortingStore: ObservableObject {
     @Published var questions = Dictionary<Int, SortingQuestion>()
     @Published var destinations = Dictionary<String, SortingDestination>()
     @Published var nameScores: [ScoreForName] = []
+    @Published var questionCount = 0
+    @Published var kidsMode = false
+    @Published var questionsForSort = 5
+    @Published var talkingHat = false
+    @Published var mode: Mode = Mode.start
+    @Published var movie: AVPlayer?
+    @Published var destination: SortingDestination?
+    
+    enum Mode {
+        case start
+        case settings
+        case sort
+        case results
+    }
     
     init() {
         print("A new Sorting Store has been initialized.")
@@ -182,6 +197,7 @@ class SortingStore: ObservableObject {
             user.sortingScores![destination]! += choice.choiceScoresForDestinationsDict[destination] ?? 0
         }
         question.asked = 1
+        self.questionCount += 1
     }
     
     func resetStore() {
@@ -189,6 +205,19 @@ class SortingStore: ObservableObject {
         self.questions = Dictionary<Int, SortingQuestion>()
         self.destinations = Dictionary<String, SortingDestination>()
         self.nameScores = []
+        self.questionCount = 0
+        self.mode = Mode.start
+    }
+    
+    func sortingResult() {
+        if self.user.sortingScores != nil {
+        print("Sorting scores are: \(String(describing: self.user.sortingScores))")
+        self.destination = self.user.sortingScores!.max(by: { a, b in a.value < b.value })?.key ?? SortingDestination(name: "Error", descriptionFull: "The Sorting Hat needs to be fixed.")
+        } else {
+            self.destination = SortingDestination(name: "Error", descriptionFull: "The Sorting Hat needs to be fixed.")
+            
+        }
+        self.movie = AVPlayer(url: Bundle.main.url(forResource: self.destination!.name, withExtension: "mov")!)
     }
     
     deinit {
