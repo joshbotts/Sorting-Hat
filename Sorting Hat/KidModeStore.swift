@@ -762,7 +762,7 @@ extension SortingStore {
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
                 ])
             ]),
-            15: SortingQuestion(kidMode: true, question: "Which of these shows do you like best?", choices: [
+            15: SortingQuestion(kidMode: true, question: "Which of these PBS Kids shows do you like best?", choices: [
                 SortingQuestion.SortingQuestionChoice(id: "xavier riddle", choiceText: "xavier riddle", choiceImage: "xavier riddle", choiceScoresForDestinations: [
                     ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),

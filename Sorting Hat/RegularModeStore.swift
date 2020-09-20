@@ -608,7 +608,7 @@ extension SortingStore {
                 ])
             ]),
             6: SortingQuestion(question: "Which of these would you prefer as your wand core?", choices: [
-                SortingQuestion.SortingQuestionChoice(id: "apple A14X", choiceText: "An A14X cpu", choiceScoresForDestinations: [
+                SortingQuestion.SortingQuestionChoice(id: "apple silicon", choiceText: "Apple Silicon", choiceScoresForDestinations: [
                     ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: low),
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: low),
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: low),
@@ -1947,131 +1947,7 @@ extension SortingStore {
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: low)
                 ])
             ]),
-            22: SortingQuestion(question: "Which of the last five Democratic presidents do you like best?", choices: [
-                SortingQuestion.SortingQuestionChoice(id: "kennedy", choiceText: "John F. Kennedy", choiceScoresForDestinations: [
-                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Sith"]!, score: high)
-                ]),
-                SortingQuestion.SortingQuestionChoice(id: "johnson", choiceText: "Lyndon Johnson", choiceScoresForDestinations: [
-                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Sith"]!, score: high)
-                ]),
-                SortingQuestion.SortingQuestionChoice(id: "carter", choiceText: "Jimmy Carter", choiceScoresForDestinations: [
-                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
-                ]),
-                SortingQuestion.SortingQuestionChoice(id: "clinton", choiceText: "Bill Clinton", choiceScoresForDestinations: [
-                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Sith"]!, score: higher)
-                ]),
-                SortingQuestion.SortingQuestionChoice(id: "obama", choiceText: "Barack Obama", choiceScoresForDestinations: [
-                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: highest),
-                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: highest),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: highest),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
-                ])
-            ]),
-            23: SortingQuestion(question: "Which of the last five Republican presidents do you like best?", choices: [
-                SortingQuestion.SortingQuestionChoice(id: "ford", choiceText: "Gerald Ford", choiceScoresForDestinations: [
-                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
-                ]),
-                SortingQuestion.SortingQuestionChoice(id: "reagan", choiceText: "Ronald Reagan", choiceScoresForDestinations: [
-                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Sith"]!, score: high)
-                ]),
-                SortingQuestion.SortingQuestionChoice(id: "hw bush", choiceText: "George H.W. Bush", choiceScoresForDestinations: [
-                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Sith"]!, score: neutral)
-                ]),
-                SortingQuestion.SortingQuestionChoice(id: "w bush", choiceText: "George W. Bush", choiceScoresForDestinations: [
-                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: lower),
-                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: lower),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: high),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: lower),
-                    ScoreForDestination(destination: self.destinations["Sith"]!, score: higher)
-                ]),
-                SortingQuestion.SortingQuestionChoice(id: "trump", choiceText: "Donald Trump", choiceScoresForDestinations: [
-                    ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: lower),
-                    ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: lowest),
-                    ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
-                    ScoreForDestination(destination: self.destinations["Slytherin"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Hogwarts Headmaster"]!, score: lowest),
-                    ScoreForDestination(destination: self.destinations["Dumbledore's Army"]!, score: lower),
-                    ScoreForDestination(destination: self.destinations["Death Eater"]!, score: highest),
-                    ScoreForDestination(destination: self.destinations["Muggle"]!, score: higher),
-                    ScoreForDestination(destination: self.destinations["Jedi"]!, score: low),
-                    ScoreForDestination(destination: self.destinations["Sith"]!, score: highest)
-                ])
-            ]),
-            24: SortingQuestion(question: "Which of these locations within Hogwarts would you most like to visit?", choices: [
+            22: SortingQuestion(question: "Which of these locations within Hogwarts would you most like to visit?", choices: [
                 SortingQuestion.SortingQuestionChoice(id: "chamber of secrets", choiceText: "The Chamber of Secrets. No muggle-borns allowed!", choiceScoresForDestinations: [
                     ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: high),
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: low),
@@ -2084,7 +1960,7 @@ extension SortingStore {
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: lower),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: high)
                 ]),
-                SortingQuestion.SortingQuestionChoice(id: "headmaster's office", choiceText: "The Headmaster's Office. Portraits and pensieves!", choiceScoresForDestinations: [
+                SortingQuestion.SortingQuestionChoice(id: "headmaster's office", choiceText: "The Headmaster's Office. Let me at the portraits and the pensieves!", choiceScoresForDestinations: [
                     ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: higher),
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: neutral),
@@ -2108,7 +1984,7 @@ extension SortingStore {
                     ScoreForDestination(destination: self.destinations["Jedi"]!, score: lower),
                     ScoreForDestination(destination: self.destinations["Sith"]!, score: lower)
                 ]),
-                SortingQuestion.SortingQuestionChoice(id: "library", choiceText: "The Library. Just think of all that power just waiting for me on those shelves!", choiceScoresForDestinations: [
+                SortingQuestion.SortingQuestionChoice(id: "library", choiceText: "The Library. Just think of what you can learn from all the books on those shelves!", choiceScoresForDestinations: [
                     ScoreForDestination(destination: self.destinations["Gryffindor"]!, score: neutral),
                     ScoreForDestination(destination: self.destinations["Ravenclaw"]!, score: highest),
                     ScoreForDestination(destination: self.destinations["Hufflepuff"]!, score: low),

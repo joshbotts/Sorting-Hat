@@ -106,7 +106,7 @@ struct KidSortingView: View {
         }
         }
         .padding(.bottom, 20)
-        .background(Image(decorative: "parchment").opacity(0.6).scaledToFill())
+        .background(Image(decorative: "parchment").scaledToFill())
     }
 }
 

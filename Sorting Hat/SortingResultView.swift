@@ -19,8 +19,10 @@ struct SortingResultView: View {
                 .onAppear( perform: { self.store.movie?.play() } )
             Spacer()
             Text("\(self.store.user.name), you strike me as a...")
+                .font(.headline)
             Spacer()
             Text(self.store.destination!.name == "Dumbledore's Army" ? "member of \(self.store.destination!.name)!" : "\(self.store.destination!.name)!")
+                .font(.headline)
             Spacer()
             Text(self.store.destination!.descriptionFull)
                 .font(.caption)
@@ -39,7 +41,7 @@ struct SortingResultView: View {
             )
         }
         .padding()
-        .background(Image(decorative: "parchment").opacity(0.6).scaledToFill())
+        .background(Image(decorative: "parchment").scaledToFill())
     }
 }
 

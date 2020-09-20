@@ -215,7 +215,6 @@ class SortingStore: ObservableObject {
         self.destination = self.user.sortingScores!.max(by: { a, b in a.value < b.value })?.key ?? SortingDestination(name: "Error", descriptionFull: "The Sorting Hat needs to be fixed.")
         } else {
             self.destination = SortingDestination(name: "Error", descriptionFull: "The Sorting Hat needs to be fixed.")
-            
         }
         self.movie = AVPlayer(url: Bundle.main.url(forResource: self.destination!.name, withExtension: "mov")!)
     }

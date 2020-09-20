@@ -11,6 +11,7 @@ import AVFoundation
 
 struct StartingView: View {
     @EnvironmentObject var store: SortingStore
+    @Environment(\.colorScheme) var colorScheme
     @State var userName: String = ""
     
     var body: some View {
@@ -29,13 +30,14 @@ struct StartingView: View {
                             self.store.mode = SortingStore.Mode.sort
                         })
                         .font(.title)
+                        .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .disableAutocorrection(true)
                         .padding(.horizontal, 20)
                     }
                     VStack(alignment: .leading) {
                         Text("Enter your name and press return.")
-                            .font(.body)
+                            .font(.headline)
                     }
                 }
                 Spacer()
@@ -86,7 +88,7 @@ struct StartingView: View {
                 )
                 Spacer()
             }
-            .background(Image(decorative: "parchment").opacity(0.6).scaledToFill())
+            .background(Image(decorative: "parchment").scaledToFill())
         }
     }
 }
@@ -96,30 +98,3 @@ struct StartingView_Previews: PreviewProvider {
         StartingView()
     }
 }
-
-//class KeyboardResponder: ObservableObject {
-//    private var notificationCenter: NotificationCenter
-//    @Published private(set) var currentHeight: CGFloat = 0
-//
-//    init(center: NotificationCenter = .default) {
-//        notificationCenter = center
-//        notificationCenter.addObserver(self, selector: #selector(keyBoardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        notificationCenter.addObserver(self, selector: #selector(keyBoardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-//    }
-//
-//    deinit {
-//        notificationCenter.removeObserver(self)
-//    }
-//
-//    @objc func keyBoardWillShow(notification: Notification) {
-//        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-//            currentHeight = keyboardSize.height
-//        }
-//    }
-//
-//    @objc func keyBoardWillHide(notification: Notification) {
-//        currentHeight = 0
-//    }
-//}
-
-// implemented view response to keyboard activation from https://stackoverflow.com/a/58242249/12259419

@@ -72,7 +72,7 @@ struct RegularSortingView: View {
             VStack {
                 Button(action: {
                     if store.talkingHat {
-                    self.speakQuestion()
+                        self.speakQuestion()
                     }
                 }) {
                     Text(self.store.questions[question]!.question)
@@ -90,35 +90,38 @@ struct RegularSortingView: View {
                 )
             }
             ScrollView {
-            ForEach(self.store.questions[question]!.choices, id: \.self.id) { choice in
-                HStack {
-                    Spacer()
-                    Button(choice.choiceText, action: {
-                        self.scoreQuestion(choice: choice)
-                        self.refreshView()
-                    })
-                    .foregroundColor(Color.black)
+                ForEach(self.store.questions[question]!.choices, id: \.self.id) { choice in
+                    HStack {
+                        Spacer()
+                        Button(choice.choiceText, action: {
+                            self.scoreQuestion(choice: choice)
+                            self.refreshView()
+                        })
+                        .foregroundColor(Color.black)
                         .layoutPriority(2)
                         .lineLimit(nil)
                         .fixedSize(horizontal: false, vertical: true)
-                    Spacer()
-                    if self.store.talkingHat == true {
-                        Button(action: {
-                            self.speakChoice(choice: choice)
-                        }) { Image(systemName: "speaker.2.fill") }
+                        .padding(.horizontal, 30)
+                        .padding(.vertical, 10)
+                        .background(Image(decorative: "paper")
+                                        .resizable()
+                        )
+                        Spacer()
+                        if self.store.talkingHat == true {
+                            Button(action: {
+                                self.speakChoice(choice: choice)
+                            }) { Image(systemName: "speaker.2.fill") }.padding(.horizontal, 10)
+                        }
                     }
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.vertical, 10)
+                    .padding(.horizontal, 20)
                 }
-                .lineLimit(nil)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(30)
-                .background(Image(decorative: "paper")
-                                .resizable()
-                )
             }
         }
-        }
         .padding(.bottom, 20)
-        .background(Image(decorative: "parchment").opacity(0.6).scaledToFill())
+        .background(Image(decorative: "parchment").scaledToFill())
     }
 }
 
