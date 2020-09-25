@@ -18,7 +18,7 @@ struct ContentView: View {
         case SortingStore.Mode.start:
             StartingView()
         case SortingStore.Mode.settings:
-            SettingsView(questionsToAsk: self.store.questionsForSort)
+            SettingsView(questionsToAsk: self.store.questionsForSort, kidsMode: self.store.kidsMode, talkingHat: self.store.talkingHat)
         case SortingStore.Mode.sort:
             SortingView()
         case SortingStore.Mode.results:

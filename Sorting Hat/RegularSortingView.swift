@@ -14,6 +14,7 @@ struct RegularSortingView: View {
     @EnvironmentObject var store: SortingStore
     @State var question: Int
     let synthesizer = AVSpeechSynthesizer()
+    @Environment(\.colorScheme) var colorScheme
     
     func getQuestion() -> Int {
         var unaskedQuestions = Dictionary<Int, SortingQuestion>()
@@ -84,7 +85,8 @@ struct RegularSortingView: View {
                 }
                 .lineLimit(nil)
                 .fixedSize(horizontal: false, vertical: true)
-                .padding(40)
+                .padding(.horizontal, 40)
+                .padding(.vertical, 20)
                 .background(Image(decorative: "paper")
                                 .resizable()
                 )
@@ -101,7 +103,7 @@ struct RegularSortingView: View {
                         .layoutPriority(2)
                         .lineLimit(nil)
                         .fixedSize(horizontal: false, vertical: true)
-                        .padding(.horizontal, 30)
+                        .padding(.horizontal, 40)
                         .padding(.vertical, 10)
                         .background(Image(decorative: "paper")
                                         .resizable()
@@ -110,13 +112,19 @@ struct RegularSortingView: View {
                         if self.store.talkingHat == true {
                             Button(action: {
                                 self.speakChoice(choice: choice)
-                            }) { Image(systemName: "speaker.2.fill") }.padding(.horizontal, 10)
+                            })
+                            {
+                                Image(systemName: "speaker.2.fill")
+                                
+                            }
+                            .padding(.horizontal, 10)
+                            .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                         }
                     }
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.vertical, 10)
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 30)
                 }
             }
         }
