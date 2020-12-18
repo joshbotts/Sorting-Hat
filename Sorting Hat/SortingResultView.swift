@@ -25,6 +25,7 @@ struct SortingResultView: View {
                 Text(self.store.destination!.name == "Dumbledore's Army" ? "member of \(self.store.destination!.name)!" : "\(self.store.destination!.name)!")
                     .font(.headline)
             }
+            .foregroundColor(Color.black)
             .padding(.horizontal, 40)
             .padding(.vertical, 20)
             .background(Image(decorative: "paper")
