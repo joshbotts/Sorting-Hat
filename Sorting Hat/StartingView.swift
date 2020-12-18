@@ -31,6 +31,7 @@ struct StartingView: View {
                         })
                         .font(.title)
                         .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                        .background(Color.white)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .disableAutocorrection(true)
                         .padding(.horizontal, 20)
