@@ -168,6 +168,7 @@ class SortingStore: ObservableObject {
     @Published var destination: SortingDestination?
     
     enum Mode {
+        case loading
         case start
         case settings
         case sort

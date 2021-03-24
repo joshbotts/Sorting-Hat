@@ -15,6 +15,8 @@ struct ContentView: View {
     
     var body: some View {
         switch self.store.mode {
+        case SortingStore.Mode.loading:
+            StartupView()
         case SortingStore.Mode.start:
             StartingView()
         case SortingStore.Mode.settings:

@@ -36,6 +36,9 @@
 		8DB15305250C53A7003051AF /* StartingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB15304250C53A7003051AF /* StartingView.swift */; };
 		8DCF6CA024819294003B75BB /* RegularModeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF6C9F24819294003B75BB /* RegularModeStore.swift */; };
 		8DCF6CA2248192F3003B75BB /* KidModeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF6CA1248192F3003B75BB /* KidModeStore.swift */; };
+		8DEEEE3C260AEB9D008259B0 /* Airtable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEEE3B260AEB9D008259B0 /* Airtable.swift */; };
+		8DEEEE41260AEC5C008259B0 /* Private Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEEE40260AEC5C008259B0 /* Private Configuration.swift */; };
+		8DEEEE44260AEEF3008259B0 /* StartupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEEE43260AEEF3008259B0 /* StartupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		8DB15304250C53A7003051AF /* StartingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingView.swift; sourceTree = "<group>"; };
 		8DCF6C9F24819294003B75BB /* RegularModeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularModeStore.swift; sourceTree = "<group>"; };
 		8DCF6CA1248192F3003B75BB /* KidModeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidModeStore.swift; sourceTree = "<group>"; };
+		8DEEEE3B260AEB9D008259B0 /* Airtable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airtable.swift; sourceTree = "<group>"; };
+		8DEEEE40260AEC5C008259B0 /* Private Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Private Configuration.swift"; sourceTree = "<group>"; };
+		8DEEEE43260AEEF3008259B0 /* StartupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8D94A61C2447A14F00B6222A /* AppDelegate.swift */,
+				8DEEEE43260AEEF3008259B0 /* StartupView.swift */,
 				8D94A61E2447A14F00B6222A /* SceneDelegate.swift */,
 				8D94A6202447A14F00B6222A /* ContentView.swift */,
 				8DB15304250C53A7003051AF /* StartingView.swift */,
@@ -132,6 +139,8 @@
 				8D7219382447E08700B2D173 /* Classes.swift */,
 				8DCF6CA1248192F3003B75BB /* KidModeStore.swift */,
 				8DCF6C9F24819294003B75BB /* RegularModeStore.swift */,
+				8DEEEE3B260AEB9D008259B0 /* Airtable.swift */,
+				8DEEEE40260AEC5C008259B0 /* Private Configuration.swift */,
 			);
 			path = "Sorting Hat";
 			sourceTree = "<group>";
@@ -160,6 +169,8 @@
 			dependencies = (
 			);
 			name = "Sorting Hat";
+			packageProductDependencies = (
+			);
 			productName = "Sorting Hat";
 			productReference = 8D94A6192447A14F00B6222A /* Sorting Hat.app */;
 			productType = "com.apple.product-type.application";
@@ -188,6 +199,8 @@
 				Base,
 			);
 			mainGroup = 8D94A6102447A14F00B6222A;
+			packageReferences = (
+			);
 			productRefGroup = 8D94A61A2447A14F00B6222A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,12 +248,15 @@
 				8D7219392447E08700B2D173 /* Classes.swift in Sources */,
 				8DCF6CA2248192F3003B75BB /* KidModeStore.swift in Sources */,
 				8D9CB98B24FC32E0004A38B3 /* KidSortingView.swift in Sources */,
+				8DEEEE3C260AEB9D008259B0 /* Airtable.swift in Sources */,
 				8D94A6212447A14F00B6222A /* ContentView.swift in Sources */,
 				8D2FF38F2509AF5E00E9AC20 /* deprecated.swift in Sources */,
+				8DEEEE44260AEEF3008259B0 /* StartupView.swift in Sources */,
 				8D9A9E002461F785000E307E /* SortingView.swift in Sources */,
 				8DCF6CA024819294003B75BB /* RegularModeStore.swift in Sources */,
 				8DB15305250C53A7003051AF /* StartingView.swift in Sources */,
 				8D4559B024FD2AF30094816E /* SettingsView.swift in Sources */,
+				8DEEEE41260AEC5C008259B0 /* Private Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
