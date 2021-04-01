@@ -11,6 +11,7 @@ import Combine
 
 class AirtableController: ObservableObject {
     // AirtableConfig is a struct with two constant properties: my Airtable base URL and my API key
+    // read-only link to Airtable data source: https://airtable.com/invite/l?inviteId=invKAaewa7LbKW80n&inviteToken=a6360616462a543566787cc2123c158c160b1a6506dbbb1c36afa66b0674a3fe
     let config = AirtableConfig()
     let session = URLSession.shared
     
