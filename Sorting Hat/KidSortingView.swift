@@ -18,7 +18,7 @@ struct KidSortingView: View {
     func getQuestion() -> Int {
         var unaskedQuestions = Dictionary<Int, SortingQuestion>()
         for question in self.store.questions {
-            if question.value.asked == 0 {
+            if question.value.asked == 0 && question.value.kidMode {
                 unaskedQuestions[question.key] = question.value
             }
         }
@@ -95,7 +95,7 @@ struct KidSortingView: View {
                         self.scoreQuestion(choice: choice)
                         self.refreshView()
                     })  {
-                        Image(choice.choiceImage!)
+                        Image(uiImage: UIImage(data: FileManager.default.contents(atPath: choice.id)!)!)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(maxWidth: 300, maxHeight: 300)

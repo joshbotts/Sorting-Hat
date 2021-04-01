@@ -126,6 +126,12 @@ struct SettingsView: View {
             //                Text(String(self.questionsToAsk + 1))
             //                    .font(.caption)
             //            }.padding()
+            Link("Suggest a new sorting question", destination: URL(string: "https://airtable.com/shrNAVEKBOOEustpG")!)
+                .padding(.horizontal, 40)
+                .padding(.vertical, 20)
+                .background(Image(decorative: "paper")
+                                .resizable()
+                )
             Button("Return to the Sorting Hat", action: {
                     self.store.kidsMode = kidsMode
                     self.store.talkingHat = talkingHat

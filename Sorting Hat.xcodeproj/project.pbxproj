@@ -7,22 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D2FF38F2509AF5E00E9AC20 /* deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2FF38E2509AF5E00E9AC20 /* deprecated.swift */; };
+		8D3BF25026116C54009ED5CD /* AirtableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BF24F26116C54009ED5CD /* AirtableController.swift */; };
+		8D3BF25426116E80009ED5CD /* LocalCacheController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BF25326116E80009ED5CD /* LocalCacheController.swift */; };
 		8D4559B024FD2AF30094816E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4559AF24FD2AF30094816E /* SettingsView.swift */; };
 		8D466BC4250C695600C50315 /* Error.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D466BC3250C695500C50315 /* Error.mov */; };
+		8D6539BB2613C4A4000EB15A /* AirtableLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6539BA2613C4A4000EB15A /* AirtableLoader.swift */; };
 		8D7219392447E08700B2D173 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7219382447E08700B2D173 /* Classes.swift */; };
-		8D78C6E2247A0E1800185B1C /* Ravenclaw Prefect.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D78C6E1247A0E1800185B1C /* Ravenclaw Prefect.mov */; };
-		8D8E093824723C5B008095DA /* Dark Lord.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093724723C5B008095DA /* Dark Lord.mov */; };
-		8D8E093A24723C6C008095DA /* Death Eater.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093924723C6C008095DA /* Death Eater.mov */; };
-		8D8E093C24723C7F008095DA /* Dumbledore's Army.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093B24723C7F008095DA /* Dumbledore's Army.mov */; };
-		8D8E093E24723C8E008095DA /* Gryffindor.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093D24723C8E008095DA /* Gryffindor.mov */; };
-		8D8E094024723CA3008095DA /* Hogwarts Headmaster.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E093F24723CA3008095DA /* Hogwarts Headmaster.mov */; };
-		8D8E094224723CB4008095DA /* Hufflepuff.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E094124723CB4008095DA /* Hufflepuff.mov */; };
-		8D8E094424723CC3008095DA /* Jedi.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E094324723CC3008095DA /* Jedi.mov */; };
-		8D8E094624723CDB008095DA /* Muggle.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E094524723CDB008095DA /* Muggle.mov */; };
-		8D8E094824723CE7008095DA /* Ravenclaw.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E094724723CE7008095DA /* Ravenclaw.mov */; };
-		8D8E094A24723CFC008095DA /* Sith.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E094924723CFC008095DA /* Sith.mov */; };
-		8D8E094C24723D07008095DA /* Slytherin.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E094B24723D07008095DA /* Slytherin.mov */; };
 		8D94A61D2447A14F00B6222A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94A61C2447A14F00B6222A /* AppDelegate.swift */; };
 		8D94A61F2447A14F00B6222A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94A61E2447A14F00B6222A /* SceneDelegate.swift */; };
 		8D94A6212447A14F00B6222A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94A6202447A14F00B6222A /* ContentView.swift */; };
@@ -36,28 +26,19 @@
 		8DB15305250C53A7003051AF /* StartingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB15304250C53A7003051AF /* StartingView.swift */; };
 		8DCF6CA024819294003B75BB /* RegularModeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF6C9F24819294003B75BB /* RegularModeStore.swift */; };
 		8DCF6CA2248192F3003B75BB /* KidModeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF6CA1248192F3003B75BB /* KidModeStore.swift */; };
-		8DEEEE3C260AEB9D008259B0 /* Airtable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEEE3B260AEB9D008259B0 /* Airtable.swift */; };
+		8DEEEE3C260AEB9D008259B0 /* AirtableModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEEE3B260AEB9D008259B0 /* AirtableModels.swift */; };
 		8DEEEE41260AEC5C008259B0 /* Private Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEEE40260AEC5C008259B0 /* Private Configuration.swift */; };
 		8DEEEE44260AEEF3008259B0 /* StartupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEEE43260AEEF3008259B0 /* StartupView.swift */; };
+		8DEEEE48260AF9F0008259B0 /* sorting hat 2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8DEEEE47260AF9F0008259B0 /* sorting hat 2.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8D2FF38E2509AF5E00E9AC20 /* deprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deprecated.swift; sourceTree = "<group>"; };
+		8D3BF24F26116C54009ED5CD /* AirtableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirtableController.swift; sourceTree = "<group>"; };
+		8D3BF25326116E80009ED5CD /* LocalCacheController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheController.swift; sourceTree = "<group>"; };
 		8D4559AF24FD2AF30094816E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8D466BC3250C695500C50315 /* Error.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Error.mov; sourceTree = "<group>"; };
+		8D6539BA2613C4A4000EB15A /* AirtableLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirtableLoader.swift; sourceTree = "<group>"; };
 		8D7219382447E08700B2D173 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
-		8D78C6E1247A0E1800185B1C /* Ravenclaw Prefect.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Ravenclaw Prefect.mov"; path = "Sorting Hat/Assets.xcassets/Ravenclaw Prefect.dataset/Ravenclaw Prefect.mov"; sourceTree = "<group>"; };
-		8D8E093724723C5B008095DA /* Dark Lord.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Dark Lord.mov"; path = "Sorting Hat/Assets.xcassets/Dark Lord.dataset/Dark Lord.mov"; sourceTree = "<group>"; };
-		8D8E093924723C6C008095DA /* Death Eater.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Death Eater.mov"; path = "Sorting Hat/Assets.xcassets/Death Eater.dataset/Death Eater.mov"; sourceTree = "<group>"; };
-		8D8E093B24723C7F008095DA /* Dumbledore's Army.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Dumbledore's Army.mov"; path = "Sorting Hat/Assets.xcassets/Dumbledore's Army.dataset/Dumbledore's Army.mov"; sourceTree = "<group>"; };
-		8D8E093D24723C8E008095DA /* Gryffindor.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Gryffindor.mov; path = "Sorting Hat/Assets.xcassets/Gryffindor.dataset/Gryffindor.mov"; sourceTree = "<group>"; };
-		8D8E093F24723CA3008095DA /* Hogwarts Headmaster.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "Hogwarts Headmaster.mov"; path = "Sorting Hat/Assets.xcassets/Hogwarts Headmaster.dataset/Hogwarts Headmaster.mov"; sourceTree = "<group>"; };
-		8D8E094124723CB4008095DA /* Hufflepuff.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Hufflepuff.mov; path = "Sorting Hat/Assets.xcassets/Hufflepuff.dataset/Hufflepuff.mov"; sourceTree = "<group>"; };
-		8D8E094324723CC3008095DA /* Jedi.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Jedi.mov; path = "Sorting Hat/Assets.xcassets/Jedi.dataset/Jedi.mov"; sourceTree = "<group>"; };
-		8D8E094524723CDB008095DA /* Muggle.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Muggle.mov; path = "Sorting Hat/Assets.xcassets/Muggle.dataset/Muggle.mov"; sourceTree = "<group>"; };
-		8D8E094724723CE7008095DA /* Ravenclaw.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Ravenclaw.mov; path = "Sorting Hat/Assets.xcassets/Ravenclaw.dataset/Ravenclaw.mov"; sourceTree = "<group>"; };
-		8D8E094924723CFC008095DA /* Sith.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Sith.mov; path = "Sorting Hat/Assets.xcassets/Sith.dataset/Sith.mov"; sourceTree = "<group>"; };
-		8D8E094B24723D07008095DA /* Slytherin.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = Slytherin.mov; path = "Sorting Hat/Assets.xcassets/Slytherin.dataset/Slytherin.mov"; sourceTree = "<group>"; };
 		8D94A6192447A14F00B6222A /* Sorting Hat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sorting Hat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D94A61C2447A14F00B6222A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D94A61E2447A14F00B6222A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,9 +54,10 @@
 		8DB15304250C53A7003051AF /* StartingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingView.swift; sourceTree = "<group>"; };
 		8DCF6C9F24819294003B75BB /* RegularModeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularModeStore.swift; sourceTree = "<group>"; };
 		8DCF6CA1248192F3003B75BB /* KidModeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidModeStore.swift; sourceTree = "<group>"; };
-		8DEEEE3B260AEB9D008259B0 /* Airtable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airtable.swift; sourceTree = "<group>"; };
+		8DEEEE3B260AEB9D008259B0 /* AirtableModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirtableModels.swift; sourceTree = "<group>"; };
 		8DEEEE40260AEC5C008259B0 /* Private Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Private Configuration.swift"; sourceTree = "<group>"; };
 		8DEEEE43260AEEF3008259B0 /* StartupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupView.swift; sourceTree = "<group>"; };
+		8DEEEE47260AF9F0008259B0 /* sorting hat 2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "sorting hat 2.mov"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,18 +74,7 @@
 		8D94A6102447A14F00B6222A = {
 			isa = PBXGroup;
 			children = (
-				8D78C6E1247A0E1800185B1C /* Ravenclaw Prefect.mov */,
-				8D8E094B24723D07008095DA /* Slytherin.mov */,
-				8D8E094924723CFC008095DA /* Sith.mov */,
-				8D8E094724723CE7008095DA /* Ravenclaw.mov */,
-				8D8E094524723CDB008095DA /* Muggle.mov */,
-				8D8E094324723CC3008095DA /* Jedi.mov */,
-				8D8E094124723CB4008095DA /* Hufflepuff.mov */,
-				8D8E093F24723CA3008095DA /* Hogwarts Headmaster.mov */,
-				8D8E093D24723C8E008095DA /* Gryffindor.mov */,
-				8D8E093B24723C7F008095DA /* Dumbledore's Army.mov */,
-				8D8E093924723C6C008095DA /* Death Eater.mov */,
-				8D8E093724723C5B008095DA /* Dark Lord.mov */,
+				8DEEEE47260AF9F0008259B0 /* sorting hat 2.mov */,
 				8D466BC3250C695500C50315 /* Error.mov */,
 				8D94A61B2447A14F00B6222A /* Sorting Hat */,
 				8D94A61A2447A14F00B6222A /* Products */,
@@ -126,7 +97,6 @@
 				8D94A61E2447A14F00B6222A /* SceneDelegate.swift */,
 				8D94A6202447A14F00B6222A /* ContentView.swift */,
 				8DB15304250C53A7003051AF /* StartingView.swift */,
-				8D2FF38E2509AF5E00E9AC20 /* deprecated.swift */,
 				8D4559AF24FD2AF30094816E /* SettingsView.swift */,
 				8D9A9DFF2461F785000E307E /* SortingView.swift */,
 				8D9CB98A24FC32E0004A38B3 /* KidSortingView.swift */,
@@ -139,7 +109,10 @@
 				8D7219382447E08700B2D173 /* Classes.swift */,
 				8DCF6CA1248192F3003B75BB /* KidModeStore.swift */,
 				8DCF6C9F24819294003B75BB /* RegularModeStore.swift */,
-				8DEEEE3B260AEB9D008259B0 /* Airtable.swift */,
+				8DEEEE3B260AEB9D008259B0 /* AirtableModels.swift */,
+				8D3BF24F26116C54009ED5CD /* AirtableController.swift */,
+				8D6539BA2613C4A4000EB15A /* AirtableLoader.swift */,
+				8D3BF25326116E80009ED5CD /* LocalCacheController.swift */,
 				8DEEEE40260AEC5C008259B0 /* Private Configuration.swift */,
 			);
 			path = "Sorting Hat";
@@ -215,19 +188,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D78C6E2247A0E1800185B1C /* Ravenclaw Prefect.mov in Resources */,
-				8D8E094C24723D07008095DA /* Slytherin.mov in Resources */,
-				8D8E094A24723CFC008095DA /* Sith.mov in Resources */,
+				8DEEEE48260AF9F0008259B0 /* sorting hat 2.mov in Resources */,
 				8D466BC4250C695600C50315 /* Error.mov in Resources */,
-				8D8E094824723CE7008095DA /* Ravenclaw.mov in Resources */,
-				8D8E094624723CDB008095DA /* Muggle.mov in Resources */,
-				8D8E094424723CC3008095DA /* Jedi.mov in Resources */,
-				8D8E094224723CB4008095DA /* Hufflepuff.mov in Resources */,
-				8D8E094024723CA3008095DA /* Hogwarts Headmaster.mov in Resources */,
-				8D8E093E24723C8E008095DA /* Gryffindor.mov in Resources */,
-				8D8E093C24723C7F008095DA /* Dumbledore's Army.mov in Resources */,
-				8D8E093A24723C6C008095DA /* Death Eater.mov in Resources */,
-				8D8E093824723C5B008095DA /* Dark Lord.mov in Resources */,
 				8D94A6292447A15000B6222A /* LaunchScreen.storyboard in Resources */,
 				8D94A6262447A15000B6222A /* Preview Assets.xcassets in Resources */,
 				8D94A6232447A15000B6222A /* Assets.xcassets in Resources */,
@@ -243,14 +205,16 @@
 			files = (
 				8D9CB98D24FC3311004A38B3 /* RegularSortingView.swift in Sources */,
 				8D94A61D2447A14F00B6222A /* AppDelegate.swift in Sources */,
+				8D6539BB2613C4A4000EB15A /* AirtableLoader.swift in Sources */,
 				8D94A61F2447A14F00B6222A /* SceneDelegate.swift in Sources */,
+				8D3BF25426116E80009ED5CD /* LocalCacheController.swift in Sources */,
 				8D9CB98924FC32C1004A38B3 /* SortingResultView.swift in Sources */,
 				8D7219392447E08700B2D173 /* Classes.swift in Sources */,
 				8DCF6CA2248192F3003B75BB /* KidModeStore.swift in Sources */,
+				8D3BF25026116C54009ED5CD /* AirtableController.swift in Sources */,
 				8D9CB98B24FC32E0004A38B3 /* KidSortingView.swift in Sources */,
-				8DEEEE3C260AEB9D008259B0 /* Airtable.swift in Sources */,
+				8DEEEE3C260AEB9D008259B0 /* AirtableModels.swift in Sources */,
 				8D94A6212447A14F00B6222A /* ContentView.swift in Sources */,
-				8D2FF38F2509AF5E00E9AC20 /* deprecated.swift in Sources */,
 				8DEEEE44260AEEF3008259B0 /* StartupView.swift in Sources */,
 				8D9A9E002461F785000E307E /* SortingView.swift in Sources */,
 				8DCF6CA024819294003B75BB /* RegularModeStore.swift in Sources */,

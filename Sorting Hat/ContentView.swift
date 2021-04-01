@@ -12,6 +12,7 @@ import AVFoundation
 
 struct ContentView: View {
     @EnvironmentObject var store: SortingStore
+    @EnvironmentObject var controller: AirtableController
     
     var body: some View {
         switch self.store.mode {

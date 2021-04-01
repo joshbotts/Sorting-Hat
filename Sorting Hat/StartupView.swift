@@ -12,17 +12,17 @@ import AVFoundation
 
 struct StartupView: View {
     @EnvironmentObject var store: SortingStore
-    let splashMovie = AVPlayer(url: Bundle.main.url(forResource: "sorting hat", withExtension: "mov")!)
-    @State var dataLoaded: Bool = false
+    @EnvironmentObject var airtable: AirtableLoader
+    let splashMovie = AVPlayer(url: Bundle.main.url(forResource: "sorting hat 2", withExtension: "mov")!)
     
     var body: some View {
         VideoPlayer(player: splashMovie)
-            .onAppear( perform: { splashMovie.play() } )
+            .onAppear( perform: { splashMovie.play()
+                airtable.loadBase()
+            } )
             .frame(width: 360, height: 240, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-        if dataLoaded {
-            Button("Start") { store.mode = SortingStore.Mode.start }
-        } else {
-            Text("Loading data")
+        Button("Start") {
+            airtable.baseToStore(store: store)
         }
     }
 }

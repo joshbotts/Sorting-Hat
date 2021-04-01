@@ -12,11 +12,13 @@ import SwiftUI
 import AVKit
 
 struct SortingDestination: Decodable, Hashable, Equatable, CustomStringConvertible {
+    let id: String
     let name: String
     let descriptionFull: String
     let description: String
     
-    init(name: String, descriptionFull: String) {
+    init(id: String, name: String, descriptionFull: String) {
+        self.id = id
         self.name = name
         self.descriptionFull = descriptionFull
         self.description = name
@@ -47,9 +49,10 @@ class User: ObservableObject {
 
 
 class ScoreForName: Decodable {
+    let id: String
     let userNameString: String
-    var nameScoresForDestinationsDict: Dictionary<SortingDestination, Int> {
-        var dictionary = Dictionary<SortingDestination, Int>()
+    var nameScoresForDestinationsDict: Dictionary<SortingDestination, String> {
+        var dictionary = Dictionary<SortingDestination, String>()
         for nameScore in self.nameScoresForDestinationsStruct {
             dictionary[nameScore.destination] = nameScore.score
         }
@@ -57,15 +60,17 @@ class ScoreForName: Decodable {
     }
     let nameScoresForDestinationsStruct: [ScoreForDestination]
     
-    init(userNameString: String, nameScoresForDestination: [ScoreForDestination]) {
+    init(id: String, userNameString: String, nameScoresForDestination: [ScoreForDestination]) {
+        self.id = id
         self.userNameString = userNameString
         self.nameScoresForDestinationsStruct = nameScoresForDestination
     }
 }
 
 struct ScoreForDestination: Decodable, Equatable {
-    var destination: SortingDestination
-    var score: Int
+    let id: String
+    let destination: SortingDestination
+    let score: String
     
     static func == (lhs: ScoreForDestination, rhs: ScoreForDestination) -> Bool {
         if lhs.destination == rhs.destination && lhs.score == rhs.score {
@@ -82,8 +87,8 @@ class SortingQuestion: ObservableObject, Hashable {
         let id: String
         let choiceText: String
         let choiceImage: String?
-        var choiceScoresForDestinationsDict: Dictionary<SortingDestination, Int> {
-            var dictionary = Dictionary<SortingDestination, Int>()
+        var choiceScoresForDestinationsDict: Dictionary<SortingDestination, String> {
+            var dictionary = Dictionary<SortingDestination, String>()
             for choiceScore in self.choiceScoresForDestinationsStruct {
                 dictionary[choiceScore.destination] = choiceScore.score
             }
@@ -118,19 +123,22 @@ class SortingQuestion: ObservableObject, Hashable {
         }
     }
     
+    @Published var id: String
     @Published var kidMode: Bool
     @Published var question: String
     @Published var choices: [SortingQuestionChoice]
     @Published var asked: Int
     
-    init(question: String, choices: [SortingQuestionChoice]) {
+    init(id: String, question: String, choices: [SortingQuestionChoice]) {
+        self.id = id
         self.question = question
         self.choices = choices
         self.asked = 0
         self.kidMode = false
     }
     
-    init(kidMode: Bool, question: String, choices: [SortingQuestionChoice]) {
+    init(id: String, kidMode: Bool, question: String, choices: [SortingQuestionChoice]) {
+        self.id = id
         self.question = question
         self.choices = choices
         self.asked = 0
@@ -163,7 +171,7 @@ class SortingStore: ObservableObject {
     @Published var kidsMode = false
     @Published var questionsForSort = 5
     @Published var talkingHat = false
-    @Published var mode: Mode = Mode.start
+    @Published var mode: Mode = Mode.loading
     @Published var movie: AVPlayer?
     @Published var destination: SortingDestination?
     
@@ -179,15 +187,40 @@ class SortingStore: ObservableObject {
         print("A new Sorting Store has been initialized.")
     }
     
-    func loadSortingStore(user: User) {
-        user.sortingScores = Dictionary<SortingDestination, Int>()
+    func loadSortingStore(user: String) {
+        self.user = User(user)
+        self.user.sortingScores = Dictionary<SortingDestination, Int>()
         for destination in destinations.values {
-            user.sortingScores![destination] = 0
+            self.user.sortingScores![destination] = 0
         }
         for name in nameScores {
-            if user.name.lowercased().contains(name.userNameString) {
+            if self.user.name.lowercased().contains(name.userNameString) {
                 for destination in name.nameScoresForDestinationsDict.keys {
-                    user.sortingScores![destination] = name.nameScoresForDestinationsDict[destination]
+                    var score = 0
+                    switch name.nameScoresForDestinationsDict[destination] {
+                    case "destiny":
+                        score = 5000
+                    case "highest":
+                        score = Int.random(in: 95...145)
+                    case "higher":
+                        score = Int.random(in: 55...105)
+                    case "high":
+                        score = Int.random(in: 15...65)
+                    case "neutral":
+                        score = Int.random(in: -25...25)
+                    case "low":
+                        score = Int.random(in: -65 ... -15)
+                    case "lower":
+                        score = Int.random(in: -105 ... -55)
+                    case "lowest":
+                        score = Int.random(in: -145 ... -95)
+                    case "impossible":
+                        score = -5000
+                    default:
+                        score = 0
+                    }
+                    print("Score for \(name.nameScoresForDestinationsDict[destination] ?? "error - invalid destination") is \(score)")
+                    self.user.sortingScores![destination] = score
                 }
             }
         }
@@ -195,7 +228,31 @@ class SortingStore: ObservableObject {
     
     func questionScorer(user: User, question: SortingQuestion, choice: SortingQuestion.SortingQuestionChoice) {
         for destination in choice.choiceScoresForDestinationsDict.keys {
-            user.sortingScores![destination]! += choice.choiceScoresForDestinationsDict[destination] ?? 0
+            var score = 0
+            switch choice.choiceScoresForDestinationsDict[destination] {
+            case "destiny":
+                score = 5000
+            case "highest":
+                score = Int.random(in: 95...145)
+            case "higher":
+                score = Int.random(in: 55...105)
+            case "high":
+                score = Int.random(in: 15...65)
+            case "neutral":
+                score = Int.random(in: -25...25)
+            case "low":
+                score = Int.random(in: -65 ... -15)
+            case "lower":
+                score = Int.random(in: -105 ... -55)
+            case "lowest":
+                score = Int.random(in: -145 ... -95)
+            case "impossible":
+                score = -5000
+            default:
+                score = 0
+            }
+            print("Score for \(choice.choiceScoresForDestinationsDict[destination] ?? "error - invalid destination") is \(score)")
+            user.sortingScores![destination]! += score
         }
         question.asked = 1
         self.questionCount += 1
@@ -203,9 +260,9 @@ class SortingStore: ObservableObject {
     
     func resetStore() {
         self.user = User("")
-        self.questions = Dictionary<Int, SortingQuestion>()
-        self.destinations = Dictionary<String, SortingDestination>()
-        self.nameScores = []
+        for question in questions.values {
+            question.asked = 0
+        }
         self.questionCount = 0
         self.mode = Mode.start
     }
@@ -213,11 +270,11 @@ class SortingStore: ObservableObject {
     func sortingResult() {
         if self.user.sortingScores != nil {
         print("Sorting scores are: \(String(describing: self.user.sortingScores))")
-        self.destination = self.user.sortingScores!.max(by: { a, b in a.value < b.value })?.key ?? SortingDestination(name: "Error", descriptionFull: "The Sorting Hat needs to be fixed.")
+            self.destination = self.user.sortingScores!.max(by: { a, b in a.value < b.value })?.key ?? SortingDestination(id: "error", name: "Error", descriptionFull: "The Sorting Hat needs to be fixed.")
         } else {
-            self.destination = SortingDestination(name: "Error", descriptionFull: "The Sorting Hat needs to be fixed.")
+            self.destination = SortingDestination(id: "error", name: "Error", descriptionFull: "The Sorting Hat needs to be fixed.")
         }
-        self.movie = AVPlayer(url: Bundle.main.url(forResource: self.destination!.name, withExtension: "mov")!)
+        self.movie = AVPlayer(url: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(destination!.name).appendingPathExtension(".mov"))
     }
     
     deinit {

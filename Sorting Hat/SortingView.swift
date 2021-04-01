@@ -15,12 +15,28 @@ struct SortingView: View {
     @EnvironmentObject var store: SortingStore
     @State var sortingTime: Bool = false
 
+    func getKidsQuestion() -> Int {
+        var question = self.store.questions.keys.randomElement()!
+        while !self.store.questions[question]!.kidMode {
+            question = self.store.questions.keys.randomElement()!
+        }
+        return question
+    }
+    
+    func getNonKidsQuestion() -> Int {
+        var question = self.store.questions.keys.randomElement()!
+        while self.store.questions[question]!.kidMode {
+            question = self.store.questions.keys.randomElement()!
+        }
+        return question
+    }
+    
     var body: some View {
         switch self.store.kidsMode {
         case true:
-            KidSortingView(question: self.store.questions.keys.randomElement()!)
+            KidSortingView(question: self.getKidsQuestion())
         case false:
-            RegularSortingView(question: self.store.questions.keys.randomElement()!)
+            RegularSortingView(question: self.getNonKidsQuestion())
         }
     }
 }

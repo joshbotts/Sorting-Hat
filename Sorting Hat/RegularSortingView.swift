@@ -19,7 +19,7 @@ struct RegularSortingView: View {
     func getQuestion() -> Int {
         var unaskedQuestions = Dictionary<Int, SortingQuestion>()
         for question in self.store.questions {
-            if question.value.asked == 0 {
+            if question.value.asked == 0 && !question.value.kidMode {
                 unaskedQuestions[question.key] = question.value
             }
         }
