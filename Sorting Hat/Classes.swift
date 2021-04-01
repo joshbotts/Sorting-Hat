@@ -219,7 +219,7 @@ class SortingStore: ObservableObject {
                     default:
                         score = 0
                     }
-                    print("Score for \(name.nameScoresForDestinationsDict[destination] ?? "error - invalid destination") is \(score)")
+                    print("Score for \(destination) \(name.nameScoresForDestinationsDict[destination] ?? "error - invalid destination") is \(score)")
                     self.user.sortingScores![destination] = score
                 }
             }
@@ -251,7 +251,7 @@ class SortingStore: ObservableObject {
             default:
                 score = 0
             }
-            print("Score for \(choice.choiceScoresForDestinationsDict[destination] ?? "error - invalid destination") is \(score)")
+            print("Score for \(destination) \(choice.choiceScoresForDestinationsDict[destination] ?? "error - invalid destination") is \(score)")
             user.sortingScores![destination]! += score
         }
         question.asked = 1

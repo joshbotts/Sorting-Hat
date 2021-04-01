@@ -26,7 +26,6 @@ struct StartingView: View {
                     VStack(alignment: .center) {
                         TextField("Put me on! Don't be afraid!", text: self.$userName, onCommit: {
                             self.store.loadSortingStore(user: userName)
-//                            self.store.kidsMode ? self.store.setKidStore(user: self.userName) : self.store.setStore(user: self.userName);
                             print("User \(self.userName) is set. The Sorting Store has loaded these questions: \(self.store.questions.values.map({$0.question}))")
                             self.store.mode = SortingStore.Mode.sort
                         })

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D3BF25026116C54009ED5CD /* AirtableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BF24F26116C54009ED5CD /* AirtableController.swift */; };
+		8D023B2E26163C8E004A1E38 /* sorting hat 3.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D023B2C26163C8E004A1E38 /* sorting hat 3.mov */; };
 		8D3BF25426116E80009ED5CD /* LocalCacheController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BF25326116E80009ED5CD /* LocalCacheController.swift */; };
 		8D4559B024FD2AF30094816E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4559AF24FD2AF30094816E /* SettingsView.swift */; };
 		8D466BC4250C695600C50315 /* Error.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D466BC3250C695500C50315 /* Error.mov */; };
@@ -27,11 +27,10 @@
 		8DEEEE3C260AEB9D008259B0 /* AirtableModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEEE3B260AEB9D008259B0 /* AirtableModels.swift */; };
 		8DEEEE41260AEC5C008259B0 /* Private Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEEE40260AEC5C008259B0 /* Private Configuration.swift */; };
 		8DEEEE44260AEEF3008259B0 /* StartupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEEEE43260AEEF3008259B0 /* StartupView.swift */; };
-		8DEEEE48260AF9F0008259B0 /* sorting hat 2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8DEEEE47260AF9F0008259B0 /* sorting hat 2.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8D3BF24F26116C54009ED5CD /* AirtableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirtableController.swift; sourceTree = "<group>"; };
+		8D023B2C26163C8E004A1E38 /* sorting hat 3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "sorting hat 3.mov"; sourceTree = "<group>"; };
 		8D3BF25326116E80009ED5CD /* LocalCacheController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheController.swift; sourceTree = "<group>"; };
 		8D4559AF24FD2AF30094816E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8D466BC3250C695500C50315 /* Error.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Error.mov; sourceTree = "<group>"; };
@@ -53,7 +52,6 @@
 		8DEEEE3B260AEB9D008259B0 /* AirtableModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirtableModels.swift; sourceTree = "<group>"; };
 		8DEEEE40260AEC5C008259B0 /* Private Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Private Configuration.swift"; sourceTree = "<group>"; };
 		8DEEEE43260AEEF3008259B0 /* StartupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupView.swift; sourceTree = "<group>"; };
-		8DEEEE47260AF9F0008259B0 /* sorting hat 2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "sorting hat 2.mov"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +68,8 @@
 		8D94A6102447A14F00B6222A = {
 			isa = PBXGroup;
 			children = (
-				8DEEEE47260AF9F0008259B0 /* sorting hat 2.mov */,
 				8D466BC3250C695500C50315 /* Error.mov */,
+				8D023B2C26163C8E004A1E38 /* sorting hat 3.mov */,
 				8D94A61B2447A14F00B6222A /* Sorting Hat */,
 				8D94A61A2447A14F00B6222A /* Products */,
 			);
@@ -104,7 +102,6 @@
 				8D94A6242447A15000B6222A /* Preview Content */,
 				8D7219382447E08700B2D173 /* Classes.swift */,
 				8DEEEE3B260AEB9D008259B0 /* AirtableModels.swift */,
-				8D3BF24F26116C54009ED5CD /* AirtableController.swift */,
 				8D6539BA2613C4A4000EB15A /* AirtableLoader.swift */,
 				8D3BF25326116E80009ED5CD /* LocalCacheController.swift */,
 				8DEEEE40260AEC5C008259B0 /* Private Configuration.swift */,
@@ -182,7 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DEEEE48260AF9F0008259B0 /* sorting hat 2.mov in Resources */,
+				8D023B2E26163C8E004A1E38 /* sorting hat 3.mov in Resources */,
 				8D466BC4250C695600C50315 /* Error.mov in Resources */,
 				8D94A6292447A15000B6222A /* LaunchScreen.storyboard in Resources */,
 				8D94A6262447A15000B6222A /* Preview Assets.xcassets in Resources */,
@@ -204,7 +201,6 @@
 				8D3BF25426116E80009ED5CD /* LocalCacheController.swift in Sources */,
 				8D9CB98924FC32C1004A38B3 /* SortingResultView.swift in Sources */,
 				8D7219392447E08700B2D173 /* Classes.swift in Sources */,
-				8D3BF25026116C54009ED5CD /* AirtableController.swift in Sources */,
 				8D9CB98B24FC32E0004A38B3 /* KidSortingView.swift in Sources */,
 				8DEEEE3C260AEB9D008259B0 /* AirtableModels.swift in Sources */,
 				8D94A6212447A14F00B6222A /* ContentView.swift in Sources */,
@@ -351,7 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sorting Hat/Preview Content\"";
 				DEVELOPMENT_TEAM = 828S8SXVLC;
 				ENABLE_PREVIEWS = YES;
@@ -360,6 +356,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "bottsywattsy.Sorting-Hat";
 				PRODUCT_NAME = "Sorting Hat";
 				SWIFT_VERSION = 5.0;
@@ -372,7 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sorting Hat/Preview Content\"";
 				DEVELOPMENT_TEAM = 828S8SXVLC;
 				ENABLE_PREVIEWS = YES;
@@ -381,6 +378,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "bottsywattsy.Sorting-Hat";
 				PRODUCT_NAME = "Sorting Hat";
 				SWIFT_VERSION = 5.0;

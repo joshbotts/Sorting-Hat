@@ -95,7 +95,7 @@ struct KidSortingView: View {
                         self.scoreQuestion(choice: choice)
                         self.refreshView()
                     })  {
-                        Image(uiImage: UIImage(data: FileManager.default.contents(atPath: choice.id)!)!)
+                        Image(uiImage: UIImage(data: FileManager.default.contents(atPath: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(choice.id).relativePath)!)!)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(maxWidth: 300, maxHeight: 300)
@@ -109,9 +109,3 @@ struct KidSortingView: View {
         .background(Image(decorative: "parchment").scaledToFill())
     }
 }
-
-//struct KidSortingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        KidSortingView()
-//    }
-//}

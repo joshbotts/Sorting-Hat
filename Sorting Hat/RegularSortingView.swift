@@ -132,9 +132,3 @@ struct RegularSortingView: View {
         .background(Image(decorative: "parchment").scaledToFill())
     }
 }
-
-//struct RegularSortingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RegularSortingView()
-//    }
-//}
