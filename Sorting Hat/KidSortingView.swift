@@ -15,6 +15,8 @@ struct KidSortingView: View {
     @State var question: Int
     let synthesizer = AVSpeechSynthesizer()
     
+    let rows = [GridItem(.adaptive(minimum: 400))]
+    
     func getQuestion() -> Int {
         var unaskedQuestions = Dictionary<Int, SortingQuestion>()
         for question in self.store.questions {
@@ -80,7 +82,7 @@ struct KidSortingView: View {
                     .lineLimit(nil)
                     .layoutPriority(1)
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(40)
+                    .padding(.horizontal, 90)
                     .background(Image(decorative: "paper")
                                     .resizable()
                     )
@@ -88,7 +90,26 @@ struct KidSortingView: View {
             .lineLimit(nil)
             .fixedSize(horizontal: false, vertical: true)
         }
-        ScrollView(.horizontal, showsIndicators: true) {
+            ScrollView(.horizontal, showsIndicators: true) {
+            if UIDevice.current.model.contains("iPad") {
+                VStack(alignment: .center) {
+                LazyHGrid(rows: rows, content: {
+                    ForEach(self.store.questions[question]!.choices, id: \.self.id) { choice in
+                        Button(action: {
+                            self.scoreQuestion(choice: choice)
+                            self.refreshView()
+                        })  {
+                            Image(uiImage: UIImage(data: FileManager.default.contents(atPath: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(choice.id).relativePath)!)!)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth: 300, maxHeight: 300)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                })
+                }
+            } else {
+            VStack(alignment: .center) {
             HStack {
                 ForEach(self.store.questions[question]!.choices, id: \.self.id) { choice in
                     Button(action: {
@@ -103,7 +124,9 @@ struct KidSortingView: View {
                     .buttonStyle(PlainButtonStyle())
                 }
             }
+            }
         }
+            }
         }
         .padding(.bottom, 20)
         .background(Image(decorative: "parchment").scaledToFill())

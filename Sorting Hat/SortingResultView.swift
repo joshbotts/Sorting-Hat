@@ -26,7 +26,7 @@ struct SortingResultView: View {
                     .font(.headline)
             }
             .foregroundColor(Color.black)
-            .padding(.horizontal, 40)
+            .padding(.horizontal, 90)
             .padding(.vertical, 20)
             .background(Image(decorative: "paper")
                             .resizable()
@@ -35,7 +35,7 @@ struct SortingResultView: View {
             Text(self.store.destination!.descriptionFull)
                 .font(.caption)
                 .foregroundColor(Color.black)
-                .padding(.horizontal, 40)
+                .padding(.horizontal, 90)
                 .padding(.vertical, 20)
                 .background(Image(decorative: "paper")
                                 .resizable()

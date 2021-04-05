@@ -95,6 +95,20 @@ struct SettingsView: View {
                 .background(Image(decorative: "paper")
                                 .resizable()
                 )
+            Link("View Source Code on GitHub", destination: URL(string: "https://github.com/joshbotts/Sorting-Hat/")!)
+                .font(.caption)
+                .padding(.horizontal, 90)
+                .padding(.vertical, 20)
+                .background(Image(decorative: "paper")
+                                .resizable()
+                )
+            Link("View Source Data on Airtable", destination: URL(string: "https://airtable.com/invite/l?inviteId=invKAaewa7LbKW80n&inviteToken=a6360616462a543566787cc2123c158c160b1a6506dbbb1c36afa66b0674a3fe")!)
+                .font(.caption)
+                .padding(.horizontal, 90)
+                .padding(.vertical, 20)
+                .background(Image(decorative: "paper")
+                                .resizable()
+                )
             Button("Return to the Sorting Hat", action: {
                     self.store.kidsMode = kidsMode
                     self.store.talkingHat = talkingHat
