@@ -7,6 +7,8 @@ The Sorting Hat is inspired by the magical object of that name in the Harry Pott
 
 I created the Sorting Hat during the summer of 2020 as a way to gain experience developing for iOS and to give my daughter a fun diversion while she was stuck at home amidst pandemic restrictions. We had just read Sorcerer's Stone and she was growing just as obsessed with the Wizarding World as her parents remain. I hope you enjoy the app as much as I've enjoyed seeing her delight (or mortification) at being sorted into the various Hogwarts houses -- and other surprising destinations.
 
+The Sorting Hat is available through TestFlight. You can download the app by joining the beta here: https://testflight.apple.com/join/i9C8weGH
+
 The Sorting Hat is open source. The code is available here: https://github.com/joshbotts/Sorting-Hat/
 
 The Sorting Hat's data is maintained on Airtable. You can view this data here: https://airtable.com/invite/l?inviteId=invKAaewa7LbKW80n&inviteToken=a6360616462a543566787cc2123c158c160b1a6506dbbb1c36afa66b0674a3fe
