@@ -87,7 +87,7 @@ struct RegularSortingView: View {
                 }
                 .lineLimit(nil)
                 .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, 40)
+                .padding(.horizontal, 90)
                 .padding(.vertical, 20)
                 .background(Image(decorative: "paper")
                                 .resizable()
@@ -105,7 +105,7 @@ struct RegularSortingView: View {
                         .layoutPriority(2)
                         .lineLimit(nil)
                         .fixedSize(horizontal: false, vertical: true)
-                        .padding(.horizontal, 40)
+                        .padding(.horizontal, 90)
                         .padding(.vertical, 10)
                         .background(Image(decorative: "paper")
                                         .resizable()
