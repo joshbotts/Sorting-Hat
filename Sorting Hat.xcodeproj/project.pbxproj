@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D023B2E26163C8E004A1E38 /* sorting hat 3.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D023B2C26163C8E004A1E38 /* sorting hat 3.mov */; };
+		8D20FA202623E0F800DCDED0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8D20FA1F2623E0F800DCDED0 /* .gitignore */; };
 		8D3BF25426116E80009ED5CD /* LocalCacheController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BF25326116E80009ED5CD /* LocalCacheController.swift */; };
 		8D4559B024FD2AF30094816E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4559AF24FD2AF30094816E /* SettingsView.swift */; };
 		8D466BC4250C695600C50315 /* Error.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8D466BC3250C695500C50315 /* Error.mov */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		8D023B2C26163C8E004A1E38 /* sorting hat 3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "sorting hat 3.mov"; sourceTree = "<group>"; };
+		8D20FA1F2623E0F800DCDED0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		8D3BF25326116E80009ED5CD /* LocalCacheController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheController.swift; sourceTree = "<group>"; };
 		8D4559AF24FD2AF30094816E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8D466BC3250C695500C50315 /* Error.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Error.mov; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				8D4559AF24FD2AF30094816E /* SettingsView.swift */,
 				8D9A9DFF2461F785000E307E /* SortingView.swift */,
 				8D9CB98A24FC32E0004A38B3 /* KidSortingView.swift */,
+				8D20FA1F2623E0F800DCDED0 /* .gitignore */,
 				8D9CB98C24FC3311004A38B3 /* RegularSortingView.swift */,
 				8D9CB98824FC32C1004A38B3 /* SortingResultView.swift */,
 				8D94A6222447A15000B6222A /* Assets.xcassets */,
@@ -183,6 +186,7 @@
 				8D466BC4250C695600C50315 /* Error.mov in Resources */,
 				8D94A6292447A15000B6222A /* LaunchScreen.storyboard in Resources */,
 				8D94A6262447A15000B6222A /* Preview Assets.xcassets in Resources */,
+				8D20FA202623E0F800DCDED0 /* .gitignore in Resources */,
 				8D94A6232447A15000B6222A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

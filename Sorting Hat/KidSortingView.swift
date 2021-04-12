@@ -15,7 +15,7 @@ struct KidSortingView: View {
     @State var question: Int
     let synthesizer = AVSpeechSynthesizer()
     
-    let rows = [GridItem(.adaptive(minimum: 400))]
+    let columns = [GridItem(.adaptive(minimum: 300))]
     
     func getQuestion() -> Int {
         var unaskedQuestions = Dictionary<Int, SortingQuestion>()
@@ -83,17 +83,17 @@ struct KidSortingView: View {
                     .layoutPriority(1)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 90)
+                    .padding(.vertical, 20)
                     .background(Image(decorative: "paper")
                                     .resizable()
                     )
             }
             .lineLimit(nil)
             .fixedSize(horizontal: false, vertical: true)
-        }
-            ScrollView(.horizontal, showsIndicators: true) {
             if UIDevice.current.model.contains("iPad") {
+                ScrollView(.vertical, showsIndicators: true) {
                 VStack(alignment: .center) {
-                LazyHGrid(rows: rows, content: {
+                    LazyVGrid(columns: columns, content: {
                     ForEach(self.store.questions[question]!.choices, id: \.self.id) { choice in
                         Button(action: {
                             self.scoreQuestion(choice: choice)
@@ -108,7 +108,9 @@ struct KidSortingView: View {
                     }
                 })
                 }
+            }
             } else {
+            ScrollView(.horizontal, showsIndicators: true) {
             VStack(alignment: .center) {
             HStack {
                 ForEach(self.store.questions[question]!.choices, id: \.self.id) { choice in
@@ -131,4 +133,5 @@ struct KidSortingView: View {
         .padding(.bottom, 20)
         .background(Image(decorative: "parchment").scaledToFill())
     }
+}
 }
