@@ -26,11 +26,19 @@ struct StartupView: View {
                                 .resizable()
                 )
             Spacer()
+            if !UIDevice.current.model.contains("iPad") {
             VideoPlayer(player: splashMovie)
                 .onAppear( perform: { splashMovie.play()
                     airtable.loadBase()
                 } )
                 .frame(width: 360, height: 240, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            } else {
+                VideoPlayer(player: splashMovie)
+                    .onAppear( perform: { splashMovie.play()
+                        airtable.loadBase()
+                    } )
+                    .frame(minWidth: 720, maxWidth: 900, minHeight: 480, maxHeight: 600, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            }
             if airtable.state == .baseLoaded {
                 Button("Start") {
                     airtable.transcodeBase(store: store)

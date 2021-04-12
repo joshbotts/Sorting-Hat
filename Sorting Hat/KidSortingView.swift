@@ -12,6 +12,7 @@ import AVFoundation
 
 struct KidSortingView: View {
     @EnvironmentObject var store: SortingStore
+    @EnvironmentObject var airtable: AirtableLoader
     @State var question: Int
     let synthesizer = AVSpeechSynthesizer()
     
@@ -33,6 +34,7 @@ struct KidSortingView: View {
     }
     
     func scoreQuestion(choice: SortingQuestion.SortingQuestionChoice) {
+        self.airtable.getChoiceCount(choice: choice.id, updater: self.airtable.updateChoiceCount)
         self.store.questionScorer(user: self.store.user, question: self.store.questions[question]!, choice: choice)
     }
     

@@ -44,7 +44,7 @@ struct AirtableDestination: Codable {
     }
     
     let id: String
-//    let createdTime: Date
+    let createdTime: String
     let fields: AirtableDestination.Fields
     
 }
@@ -72,7 +72,7 @@ struct AirtableChoice: Codable {
     }
     
     let id: String
-//    let createdTime: Date
+    let createdTime: String
     let fields: AirtableChoice.Fields
     
 }
@@ -92,7 +92,7 @@ struct AirtableQuestion: Codable {
     }
     
     let id: String
-//    let createdTime: Date
+    let createdTime: String
     let fields: AirtableQuestion.Fields
     
 }
@@ -112,7 +112,7 @@ struct AirtableScore: Codable {
     }
     
     let id: String
-//    let createdTime: Date
+    let createdTime: String
     let fields: AirtableScore.Fields
     
 }
@@ -129,6 +129,6 @@ struct AirtableName: Codable {
     }
     
     let id: String
-//    let createdTime: Date
+    let createdTime: String
     let fields: AirtableName.Fields
 }

@@ -12,6 +12,7 @@ import AVFoundation
 
 struct RegularSortingView: View {
     @EnvironmentObject var store: SortingStore
+    @EnvironmentObject var airtable: AirtableLoader
     @State var question: Int
     let synthesizer = AVSpeechSynthesizer()
     @Environment(\.colorScheme) var colorScheme
@@ -32,6 +33,7 @@ struct RegularSortingView: View {
     }
     
     func scoreQuestion(choice: SortingQuestion.SortingQuestionChoice) {
+        self.airtable.getChoiceCount(choice: choice.id, updater: self.airtable.updateChoiceCount)
         self.store.questionScorer(user: self.store.user, question: self.store.questions[question]!, choice: choice)
     }
     

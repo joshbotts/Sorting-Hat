@@ -9,7 +9,6 @@
 import Foundation
 
 class AirtableLoader: ObservableObject {
-//    let controller = AirtableController()
     var destinations = [String: AirtableDestination]()
     var questions = [String: AirtableQuestion]()
     var choices = [String: AirtableChoice]()
@@ -521,5 +520,119 @@ class AirtableLoader: ObservableObject {
             store.mode = .start
             self.state = .complete
         }
+    }
+    
+    func getChoiceCount(choice: String, updater: @escaping (String, Int) -> Void) {
+        var request = URLRequest(url: config.baseURL.appendingPathComponent(AirtableTables.choices.rawValue).appendingPathComponent(choice))
+        request.addValue("Bearer \(config.apiKey)", forHTTPHeaderField: "Authorization")
+        let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
+                    guard let jsonData = data else {
+                        print("Server response is \(String(describing: response)). Data could not be decoded.")
+                        return
+                    }
+                    do {
+                        let decoder = JSONDecoder()
+                        let result = try decoder.decode(AirtableChoice.self, from: jsonData)
+                        if let count = result.fields.count {
+                            updater(choice, count)
+                        } else {
+                        updater(choice, 0)
+                        }
+                    } catch {
+                        print(error)
+                    }
+                }
+                dataTask.resume()
+    }
+    
+    func updateChoiceCount(choice: String, currentCount: Int) {
+        var request = URLRequest(url: config.baseURL.appendingPathComponent(AirtableTables.choices.rawValue))
+        request.addValue("Bearer \(config.apiKey)", forHTTPHeaderField: "Authorization")
+        request.httpMethod = "PATCH"
+        let json =
+            """
+            {
+              "records": [
+                {
+                  "id": "\(choice)",
+                  "fields": {
+                    "count":\(currentCount + 1)
+                  }
+                }
+              ]
+            }
+            """.data(using: .utf8)
+        request.httpBody = json
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        let updateTask = URLSession.shared.dataTask(with: request) { data, response, error in
+                    guard let jsonData = data else {
+                        print("Server response is \(String(describing: response)). Data could not be decoded.")
+                        return
+                    }
+                    do {
+                        print(String(describing: jsonData))
+                        }
+                    catch {
+                        print(error)
+                    }
+                }
+                updateTask.resume()
+    }
+    
+    func getDestinationCount(destination: String, updater: @escaping (String, Int) -> Void) {
+        var request = URLRequest(url: config.baseURL.appendingPathComponent(AirtableTables.destinations.rawValue).appendingPathComponent(destination))
+        request.addValue("Bearer \(config.apiKey)", forHTTPHeaderField: "Authorization")
+        let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
+                    guard let jsonData = data else {
+                        print("Server response is \(String(describing: response)). Data could not be decoded.")
+                        return
+                    }
+                    do {
+                        let decoder = JSONDecoder()
+                        let result = try decoder.decode(AirtableDestination.self, from: jsonData)
+                        if let count = result.fields.count {
+                            updater(destination, count)
+                        } else {
+                        updater(destination, 0)
+                        }
+                    } catch {
+                        print(error)
+                    }
+                }
+                dataTask.resume()
+    }
+    
+    func updateDestinationCount(destination: String, currentCount: Int) {
+        var request = URLRequest(url: config.baseURL.appendingPathComponent(AirtableTables.destinations.rawValue))
+        request.addValue("Bearer \(config.apiKey)", forHTTPHeaderField: "Authorization")
+        request.httpMethod = "PATCH"
+        let json =
+            """
+            {
+              "records": [
+                {
+                  "id": "\(destination)",
+                  "fields": {
+                    "count":\(currentCount + 1)
+                  }
+                }
+              ]
+            }
+            """.data(using: .utf8)
+        request.httpBody = json
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        let updateTask = URLSession.shared.dataTask(with: request) { data, response, error in
+                    guard let jsonData = data else {
+                        print("Server response is \(String(describing: response)). Data could not be decoded.")
+                        return
+                    }
+                    do {
+                        print(String(describing: jsonData))
+                        }
+                    catch {
+                        print(error)
+                    }
+                }
+                updateTask.resume()
     }
 }

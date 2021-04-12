@@ -12,12 +12,25 @@ import AVFoundation
 
 struct SortingResultView: View {
     @EnvironmentObject var store: SortingStore
+    @EnvironmentObject var airtable: AirtableLoader
     
     var body: some View {
         VStack(alignment: .center) {
-            VideoPlayer(player: store.movie!)
-                .onAppear( perform: { self.store.movie?.play() } )
+            if !UIDevice.current.model.contains("iPad") {
+                VideoPlayer(player: store.movie!)
+                    .onAppear( perform: {
+                        self.airtable.getDestinationCount(destination: self.store.destination!.id, updater: self.airtable.updateDestinationCount)
+                                self.store.movie?.play()
+                    } )
                 .frame(width: 360, height: 240, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            } else {
+                VideoPlayer(player: store.movie!)
+                    .onAppear( perform: {
+                        self.airtable.getDestinationCount(destination: self.store.destination!.id, updater: self.airtable.updateDestinationCount)
+                                self.store.movie?.play()
+                    } )
+                    .frame(minWidth: 720, maxWidth: 900, minHeight: 480, maxHeight: 600, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            }
             Spacer()
             VStack(alignment: .center) {
                 Text("\(self.store.user.name), you strike me as a...")
